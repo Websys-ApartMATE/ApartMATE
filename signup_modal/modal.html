@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="modal.css">
+	</head>
+
+	<body>
+        <h2>Modal Signup Form</h2>
+        <!--                 
+                // full name 
+                email
+                password
+                phone -->
+
+        <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
+        
+        <div id="signUpModal" class="modal">
+            <span onclick="document.getElementById('signUpModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <label for="userEmail"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="userEmail" required>
+        
+                <label for="userPassword"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="userPassword" required>
+        
+                <label for="userPasswordRepeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="userPasswordRepeat" required>
+
+                <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+        
+                <div class="clearfix">
+                <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+            </form>
+        </div>
+	</body>
+</html>
