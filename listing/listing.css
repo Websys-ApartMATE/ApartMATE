@@ -1,12 +1,20 @@
 ul {
-    list-style: none;
-    padding-left: 20px;
+  list-style: none;
+  padding-left: 20px;
 }
 
 #price {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 body {
-    padding-top: 15px;
+  padding-top: 15px;
+}
+
+#apartment_img {
+  width: 95%;
+}
+
+#listing_info {
+  padding-bottom: 10px;
 }
