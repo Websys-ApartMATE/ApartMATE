@@ -1,3 +1,5 @@
+
+
 ul {
   list-style: none;
   padding-left: 20px;
@@ -7,17 +9,17 @@ ul {
   font-size: 20px;
 }
 
-body * {
-  color: white;
+#name {
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 #address {
-  padding-top: 10px;
+  font-size: 20px;
 }
 
 body {
   padding-top: 15px;
-  background-color: #2d6d83 !important;
   height: 100%;
   min-height: 100%;
 }
@@ -34,6 +36,7 @@ body {
 
 .container {
   background-color: #08bbe7da !important;
+  box-shadow: 10px 10px 50px #08bbe7da;
 }
 
 li {
