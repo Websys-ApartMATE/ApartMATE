@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#grandparent {
+    width: 100%;
+}
+
+#parent {
+    width: 100%;
+    float: left;
+}
+
+#child {
+    width: 50%;
+    float: left;
+
+}
+
+#child2 {
+    width: 50%;
+    float: left;
+}
+
+figure {
+    border: 2px solid black;
+}
+
+body {
+    border: 2px solid black;
+}
