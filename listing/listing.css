@@ -1,0 +1,48 @@
+
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+#price {
+  font-size: 20px;
+}
+
+#name {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+#address {
+  font-size: 20px;
+}
+
+body {
+  padding-top: 15px;
+  height: 100%;
+  min-height: 100%;
+}
+
+#apartment_img {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 98%;
+}
+
+#listing_info {
+  padding-bottom: 10px;
+}
+
+.container {
+  background-color: #08bbe7da !important;
+  box-shadow: 10px 10px 50px #08bbe7da;
+}
+
+li {
+  font-size: 20px;
+}
+
+.title {
+  font-size: 30px;
+}
