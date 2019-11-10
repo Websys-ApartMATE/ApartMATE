@@ -11,12 +11,16 @@ function connect_database()
     return $conn;
 }
 
-$conn = connect_database();
-
 function new_user()
 {
-    $user = mysqli->escape_string($_POST['new_user']);
+    $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $new_user_state = mysqli->prepare("INSERT INTO users (email, password, full_name, phone_number) VALUES (?, ?, ?, ?)");
+    $new_user_state->bind_param("ssssss", $_POST["email"], hash, $_POST["full_name"], $_POST["phone_number"]);
+    $new_user_state->execute();
 }
+
+$conn = connect_database();
+
 
 if ($conn) {
     echo "Connection Successful";
