@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<!--Navigation Bar--------------------------------------------------------------------------------------->
-		<nav class="navbar navbar-expand-lg" >
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
 			<a class="navbar-brand" href="#"><img id="piclogo" src="logo.png" alt="ApartMATE logo"/></a>
 			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				<span class="navbar-toggler-icon"></span>
@@ -30,9 +30,9 @@
 				<form class="navbar-nav ml-auto">
 					<input type="text" placeholder="Username"/>
 					<input type="password" placeholder="Password"/>
-					<input type="button" value="Login"/>
-					<a class="headerMenuLink d-inline-block border border-gray-dark rounded-1 px-2 py-1" href="#" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+					<input type="button" class="btn btn-outline-secondary" value="Login"/>
 				</form>
+				<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</button>
 			</div>
 		</nav>
 
@@ -55,22 +55,30 @@
 					</div>
 					<div class="modal-body mx-3">
 						<div class="md-form mb-3">
-							<!-- <i class="fas fa-envelope prefix grey-text"></i> -->
-							<label for="inputEmail">Email address:</label>
-							<input type="email" class="form-control" id="inputEmail" placeholder="Please enter email">
-						</div>
-						<div class="md-form mb-3">
-							<!-- <i class="fas fa-user prefix grey-text"></i> -->
-							<label for="inputFullName">Name:</label>
+							<label for="inputFullName">Name</label>
 							<input type="text" class="form-control" id="inputFullName" placeholder="Please enter full name">
 						</div>
 						<div class="md-form mb-3">
-							<!-- <i class="fas fa-user prefix grey-text"></i> -->
+								<label for="inputSchool">School</label>
+								<input type="text" class="form-control" id="inputSchool" placeholder="Please enter school">
+							</div>
+						<div class="md-form mb-3">
+							<label for="inputEmail">Email address</label>
+							<input type="email" class="form-control" id="inputEmail" placeholder="Please enter email">
+						</div>
+						<div class="md-form mb-3">
+							<label for="inputPhoneNumber">Phone Number</label>
+							<input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Please enter phone number">
+						</div>
+						<div class="md-form mb-3">
+							<label for="inputBirthDate">Birthdate:</label>
+							<input type="date" class="form-control" id="inputBirthDate" placeholder="Please enter birthdate">
+						</div>
+						<div class="md-form mb-3">
 							<label for="inputPassword">Password:</label>
 							<input type="password" class="form-control" id="inputPassword" placeholder="Please enter password">
 						</div>
 						<div class="md-form mb-3">
-							<!-- <i class="fas fa-user prefix grey-text"></i> -->
 							<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
 						</div>
 					</div>
