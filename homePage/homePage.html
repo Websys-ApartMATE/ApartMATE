@@ -38,9 +38,11 @@
 
 		<!--Search bar-------------------------------------------------------------------------------------->
 		<div id="content">
-			<h3 id="oneline">Find your home away from home.</h3>
-			<input id="searchbox" type="text" placeholder="Search...">
-			<button id="searchBtn" class="btn btn-light" onclick="window.location.href='../searchPage/searchPage.html'">Search</button>
+            <form action="../searchPage/searchPage.php">
+                <h3 id="oneline">Find your home away from home.</h3>
+                <input id="searchbox" type="text" name="zip" placeholder="ZIP Code Here">
+                <input id="searchBtn" class="btn btn-light" type="submit" value="Search">
+            </form>
 		</div>
 
 		<!--Sign up modal---------------------------------------------------------------------------------->
