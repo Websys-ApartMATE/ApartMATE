@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 28, 2019 at 06:08 AM
+-- Generation Time: Nov 28, 2019 at 06:10 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -36,6 +36,11 @@ CREATE TABLE `chat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Truncate table before insert `chat`
+--
+
+TRUNCATE TABLE `chat`;
+--
 -- Dumping data for table `chat`
 --
 
@@ -65,6 +70,11 @@ CREATE TABLE `listings` (
   `Picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Truncate table before insert `listings`
+--
+
+TRUNCATE TABLE `listings`;
 -- --------------------------------------------------------
 
 --
@@ -81,6 +91,11 @@ CREATE TABLE `users` (
   `user_type` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
 --
 -- Dumping data for table `users`
 --
