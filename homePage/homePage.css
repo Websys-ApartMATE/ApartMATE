@@ -65,7 +65,8 @@ body {
 #oneline {
     text-align: center;
     font-size: 3em;
-    color: #6434eb;
+    /* color: #6434eb; */
+    color: black;
 }
 
 #signup{
