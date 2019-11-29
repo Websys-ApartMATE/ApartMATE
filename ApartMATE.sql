@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 28, 2019 at 06:10 AM
+-- Generation Time: Nov 29, 2019 at 10:53 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -36,11 +36,6 @@ CREATE TABLE `chat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncate table before insert `chat`
---
-
-TRUNCATE TABLE `chat`;
---
 -- Dumping data for table `chat`
 --
 
@@ -56,25 +51,28 @@ INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
 
 CREATE TABLE `listings` (
   `listing_id` int(100) NOT NULL,
+  `zip` int(11) NOT NULL,
   `address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `price` int(100) NOT NULL,
   `sqft` int(50) NOT NULL,
   `bed` int(2) NOT NULL,
   `bath` int(2) NOT NULL,
   `description` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `times` int(255) NOT NULL,
+  `times` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `rating` int(2) NOT NULL,
   `type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `utilites` int(1) NOT NULL,
   `landlord` smallint(3) NOT NULL,
-  `Picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `Picture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncate table before insert `listings`
+-- Dumping data for table `listings`
 --
 
-TRUNCATE TABLE `listings`;
+INSERT INTO `listings` (`listing_id`, `zip`, `address`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `type`, `utilites`, `landlord`, `Picture`) VALUES
+(1, 12180, '110 Colleen Rd, Troy, New York', 1783, 1200, 2, 1, 'This is a great place to rent.', 'Mondays 5pm-9pm', 3, 'Lease', 0, 1, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -91,11 +89,6 @@ CREATE TABLE `users` (
   `user_type` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Truncate table before insert `users`
---
-
-TRUNCATE TABLE `users`;
 --
 -- Dumping data for table `users`
 --
@@ -121,7 +114,8 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `listings`
   ADD PRIMARY KEY (`listing_id`),
-  ADD KEY `landlord` (`landlord`);
+  ADD KEY `landlord` (`landlord`),
+  ADD KEY `zip` (`zip`);
 
 --
 -- Indexes for table `users`
@@ -137,7 +131,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `listing_id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `listing_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
