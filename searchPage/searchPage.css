@@ -4,15 +4,21 @@ body {
     overflow-y:hidden;
 }
 
-.nopadding {
-    padding: 0 !important;
-    /* margin: 0 !important; */
- }
+/* navbar---------------------------------------*/
+.navbar-nav .nav-item .nav-link {
+    font-size:1.2rem;
+    color:rgb(137, 137, 137);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color:rgb(175, 175, 175);
+}
 
 #searchDisplay {
     margin-left: 50px;
 }
  
+
 h1 {
     font-size:1.8rem;
     color:rgb(92, 92, 92);
@@ -30,10 +36,10 @@ h1 {
 
 
 #listings {
-    height: 85vh;
+    height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    border: 1px solid rgb(187, 187, 187);
+    /* border: 1px solid rgb(187, 187, 187); */
  } 
 
 ::-webkit-scrollbar {
