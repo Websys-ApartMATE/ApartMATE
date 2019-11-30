@@ -78,17 +78,15 @@ body {
 	height: 86.5vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
-		/* color:rgb(92, 92, 92); */
+	
  } 
-
- .individualListing {
-	box-shadow: 10px 10px 5px rgb(201, 199, 199);
-}
 
 .apartmentNameDisplay {
 	background-color: rgba(139, 217, 247, 0.37);
 	padding-top: 10px;
-	padding-left: 30px;
+	padding-left: 30px;	
+	box-shadow: 0px 5px 5px rgb(201, 199, 199);
+	z-index:9999;
 }
 
 h1 {
