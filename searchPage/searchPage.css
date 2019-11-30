@@ -1,65 +1,120 @@
+/*Color Themes
+Gray
+Light gray: rgb(137, 137, 137);
+Lighter gray2: rgb(187, 186, 186);
+Lighter gray3:rgba(189, 189, 189, 0.37);
+
+border radius: 5px;
+
 body {
-    width:100%;
-    height:100%;
-    overflow-y:hidden;
+	width:100%;
+	height:100%;
+	overflow-y:hidden;
 }
 
 /* navbar---------------------------------------*/
 .navbar-nav .nav-item .nav-link {
-    font-size:1.2rem;
-    color:rgb(137, 137, 137);
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
 }
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
-    color:rgb(175, 175, 175);
+	color:rgb(187, 186, 186);
+}
+
+#navbarBtn {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+	border: 1px solid;
+	border-color: rgb(137, 137, 137);
+	border-radius: 5px;
+	background-color: white;
+	padding: 3px 7px 3px 7px;
+}
+
+#navbarBtn:hover {
+	border-color: rgb(187, 186, 186);
+	color:white;
+	background-color: rgb(187, 186, 186);
+}
+
+/* search bar---------------------------------*/
+#searchRow {
+	border-top: 1px solid rgba(187, 186, 186, 0.432);
+	border-bottom: 1px solid rgba(187, 186, 186, 0.432);
 }
 
 #searchDisplay {
-    margin-left: 50px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 50px;
+	width: 40%;
 }
- 
 
-h1 {
-    font-size:1.8rem;
-    color:rgb(92, 92, 92);
+.form-control {
+	border-color: rgb(187, 186, 186);
+	box-shadow:none;
+	height: 33px;
+}
+
+.form-control:focus {
+	border-color: rgb(187, 186, 186);
+	box-shadow:none;
+}
+
+#searchBtn {
+	background-color: rgb(187, 186, 186);
+	border-color:rgb(187, 186, 186);
+	height: 33px;
+	padding: 0px 10px 0px 10px;
+}
+
+#searchBtn:focus {
+	box-shadow:none;
+}
+
+/* listings display----------------------------*/
+#listings {
+	height: 86.5vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+		/* color:rgb(92, 92, 92); */
+ } 
+
+ .individualListing {
+	box-shadow: 10px 10px 5px rgb(201, 199, 199);
 }
 
 .apartmentNameDisplay {
-    background-color: rgba(139, 217, 247, 0.37);
-    padding-top: 10px;
-    padding-left: 30px;
+	background-color: rgba(139, 217, 247, 0.37);
+	padding-top: 10px;
+	padding-left: 30px;
 }
 
-#map {
-    /* height: 85vh; */
+h1 {
+	font-size:1.8rem;
+	color:rgb(92, 92, 92);
 }
 
-
-#listings {
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    /* border: 1px solid rgb(187, 187, 187); */
- } 
-
-::-webkit-scrollbar {
-    display:none;
+h2 {
+	font-size:1.1rem;
 }
+/* listing info*/
 
 .price {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-.individualListing {
-    /* margin-top:10px; */
-    box-shadow: 10px 10px 5px rgb(201, 199, 199);
+.listingSizeTags {
+	background-color:rgba(189, 189, 189, 0.37);
+	border-radius: 5px;
+	padding: 3px 5px 3px 5px;
 }
 
-.listingPic {
-    height:300px;
-    width:400px;
+.features {
+  margin: 0px 0px 0px 0px;
 }
 
-.listingInfo {
-    padding-top: 20px;
+.description {
+  font-size: 0.9rem;
 }

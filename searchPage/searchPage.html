@@ -9,6 +9,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<!--font library-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg bg-white" >
@@ -28,121 +30,174 @@
 						<a class="nav-link" href="#">Add a Listing</a>
 					</li>    
 				</ul>
-				<button type="button" class="btn btn-outline-secondary" onclick="window.location.href='../homePage/homePage.html'"">Sign Out</button>
+				<button type="button" id=navbarBtn onclick="window.location.href='../homePage/homePage.html'"">Sign Out</button>
 			</div>
 		</nav>
 
 		<div id="mainBody" class="container-fluid overflow-auto">
-			<div class="row">
-				<div id= "listings" class="col-lg-6 m-0 p-0">
-					<!--Search bos-->
-					<div class="row">
-						<div id="searchDisplay">
-								<input id="searchbox" type="text" placeholder="Search...">
-								<a href="#"><button id="searchBtn" class="btn btn-light">Search</button></a>
+			<!--Search bar------------------------------------------------>
+			<div id="searchRow" class="row h-100">
+				<div id="searchDisplay">
+					<div class="input-group">
+						<input type="text" class="form-control py-2" placeholder="Search Listings">
+						<div class="input-group-append">
+							<button id="searchBtn" class="btn btn-secondary" type="button">
+								<i class="fa fa-search fa-sm"></i>
+							</button>
 						</div>
 					</div>
-								<div class="individualListing container p-0">
-										<div class="row">
-												<div class="col-lg-12 apartmentNameDisplay">
-														<h1>Country Garden Apartments</h1>
-														<p>110 Colleen Rd, Troy, NY 12180</p>
-												</div>
-										</div>
-
-										<div class="row">
-												<div class="col-lg-7">
-														<a href="../listing/listing.html">
-															<img class="listingPic" src="countryGardenPic.jpg" alt="Responsive image"> 
-														</a>
-												</div>
-												<div class="col-lg-5 listingInfo">
-														<h class="price">$1,783/mo</h>
-														<ul class="list-inline">
-																<li class="list-inline-item">2 beds</li>
-																<li class="list-inline-item">1 bath</li>
-																<li class="list-inline-item">1200 sqft</li>
-														</ul>
-														<p>518-934-0239</p>
-														<h>Features</h>
-														<ul>
-																<li>High Speed Internet Access</li>
-																<li>Heating</li>
-																<li>Ceiling Fans</li>
-																<li>Smoke Free</li>
-														</ul>
-												</div>
-										</div>
-								</div>
-								
-								<div class="individualListing container mt-3">
-										<div class="row">
-												<div class="col-lg-12 apartmentNameDisplay">
-														<h1>The Summit at Duncan Meadows</h1>
-														<p>6 Ridgeway Ln, Troy, NY 12180</p>
-												</div>
-										</div>
-
-										<div class="row">
-												<div class="col-lg-7">
-														<img class="listingPic" src="duncanMeadows.jpg"alt="Responsive image"> 
-												</div>
-												<div class="col-lg-5 listingInfo">
-														<h class="price">$1,200/mo</h>
-														<ul class="list-inline">
-																<li class="list-inline-item">3 beds</li>
-																<li class="list-inline-item">1 bath</li>
-																<li class="list-inline-item">1000 sqft</li>
-														</ul>
-														<p>518-944-1189</p>
-														<h>Features</h>
-														<ul>
-																<li>Cable Ready</li>
-																<li>Storage Units</li>
-																<li>Tub/Shower</li>
-														</ul>
-												</div>
-										</div>
-								</div>
-
-								
-								<div class="individualListing container mt-3">
-										<div class="row">
-												<div class="col-lg-12 apartmentNameDisplay">
-														<h1>Hudson Pointe</h1>
-														<p>2 Stanton St, Troy, NY 12180</p>
-												</div>
-										</div>
-
-										<div class="row">
-												<div class="col-lg-7">
-														<img class="listingPic" src="hudsonPointe.jpg"alt="Responsive image"> 
-												</div>
-												<div class="listingInfo col-lg-5">
-														<h class="price">$900/mo</h>
-														<ul class="list-inline">
-																<li class="list-inline-item">2 beds</li>
-																<li class="list-inline-item">2 baths</li>
-																<li class="list-inline-item">700 sqft</li>
-														</ul>
-														<p>518-474-0242</p>
-														<h>Features</h>
-														<ul>
-																<li>High Speed Internet Access</li>
-																<li>Heating</li>
-																<li>Smoke Free</li>
-														</ul>
-												</div>
-										</div>
-								</div>
-								
-						</div>
-
-						
-						<div id="mapDisplay" class="col-lg-6 m-0 p-0">
-								<img id="map" src="map.png" class="img-fluid" alt="Responsive image">
-						</div>
 				</div>
+			</div>
+
+			<!--Listings and Map row-->
+			<div class="row " data-toggle="modal" data-target="#myModal">
+				<!--Listings column-->
+				<div id= "listings" class="col-lg-6 m-0 p-0">
+					
+					<!--Listing 1---------------------------------------------->
+					<div class="individualListing container p-0">
+						<div class="row">
+							<div class="col-lg-12 apartmentNameDisplay">
+								<h1>Country Garden Apartments</h1>
+								<p>110 Colleen Rd, Troy, NY 12180</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-8 p-0">
+								<img class="img-fluid" src="countryGardenPic.jpg"> 	
+							</div>
+							<div class="col-lg-4 listingInfo pl-2">
+								<h class="price">$1,783/mo</h>
+								<ul class="list-inline m-0">
+									<li class="list-inline-item listingSizeTags">2 beds</li>
+									<li class="list-inline-item listingSizeTags">1 bath</li>
+									<li class="list-inline-item listingSizeTags">1200 sqft</li>
+								</ul>
+								<h2>Features</h2>
+								<ul class="features">
+									<li>High Speed Internet Access</li>
+									<li>Heating</li>
+									<li>Ceiling Fans</li>
+									<li>Smoke Free</li>
+								</ul>
+								<h2>Description</h2>
+								<p class="description">This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke
+            free. Looking for student tenants for the Spring Semester</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">	
+							<!-- Modal content-->
+							<div class="modal-content">
+									<div class="row">
+											<div id="listing_info" class="col-lg-5">
+												<h1 id="name">Country Garden Apartments</h1>
+												<h2 id="address">110 Colleen Rd, Troy, NY 12180</h2>
+												<h3 id="price">$1783 per month</h3>
+												<h4 class="title">Features:</h4>
+												<ul id="basic_info">
+													<li>2 Beds</li>
+													<li>1 Bath</li>
+													<li>1200 Sqft</li>
+													<li>High Speed Internet Access</li>
+													<li>Heating</li>
+													<li>Ceiling Fans</li>
+													<li>Smoke Free</li>
+												</ul>
+												<h4 class="title">Description:</h4>
+												<ul id="description">
+													<li>This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke
+														free. Looking for student tenants for the Spring Semester
+													</li>
+												</ul>
+												<h4 class="title">Details:</h4>
+												<ul id="details" class="col-lg-12">
+													<li>Times for Inquiry: Mondays 5pm-9pm</li>
+													<li>User Rating: 3 out of 5</li>
+													<li>Utilities: Yes</li>
+												</ul>
+											</div>
+											<div class="col-lg-1"></div>
+											<div class="col-lg-6">
+												<img id="apartment_img" src="../searchPage/countryGardenPic.jpg" alt="">
+											</div>
+										</div>
+							</div>
+						</div>
+					</div>
+
+
+								
+					<!--Listing 2----------------------------------------------->
+					<div class="individualListing container p-0 mt-3">
+						<div class="row">
+							<div class="col-lg-12 apartmentNameDisplay">
+								<h1>The Summit at Duncan Meadows</h1>
+								<p>6 Ridgeway Ln, Troy, NY 12180</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-8">
+								<img class="img-fluid" src="duncanMeadows.jpg"alt="Responsive image"> 
+							</div>
+							<div class="col-lg-4 listingInfo">
+								<h class="price">$1,200/mo</h>
+								<ul class="list-inline">
+									<li class="list-inline-item">3 beds</li>
+									<li class="list-inline-item">1 bath</li>
+									<li class="list-inline-item">1000 sqft</li>
+								</ul>
+								<h>Features</h>
+								<ul>
+									<li>Cable Ready</li>
+									<li>Storage Units</li>
+									<li>Tub/Shower</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<!--Listing 3-------------------------------------------->
+					<div class="individualListing container p-0 mt-3">
+						<div class="row">
+							<div class="col-lg-12 apartmentNameDisplay">
+								<h1>Hudson Pointe</h1>
+								<p>2 Stanton St, Troy, NY 12180</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-8">
+								<img class="img-fluid" src="hudsonPointe.jpg"alt="Responsive image"> 
+							</div>
+							<div class="listingInfo col-lg-4">
+								<h class="price">$900/mo</h>
+								<ul class="list-inline">
+									<li class="list-inline-item">2 beds</li>
+									<li class="list-inline-item">2 baths</li>
+									<li class="list-inline-item">700 sqft</li>
+								</ul>
+								<h>Features</h>
+								<ul>
+									<li>High Speed Internet Access</li>
+									<li>Heating</li>
+									<li>Smoke Free</li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+
+				<!--Map----------------------------------------------->
+				<div id="mapDisplay" class="col-lg-6 m-0 p-0">
+					<img id="map" src="map.png" class="img-fluid" alt="Responsive image">
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
