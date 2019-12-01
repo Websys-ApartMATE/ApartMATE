@@ -28,29 +28,27 @@ body {
 	width:100%;
 }
 
-#backgroundImg {	
-  height: 100%;
-  width: 60%;
-  overflow: hidden;
-	/* background-image: linear-gradient(to top, #5834f7, #065dff, #007aff, #0091ff, #01a6ff, 
-	#00b4ff, #00c1fd, #0ccdf9, #00d6f1, #00dee0, #00e4c9, #36e8ac); */
-	/* background-image: linear-gradient(to top, #3922a1, #2746ba, #1564ce, #1b81dd, #3a9cea, #1badf2, #00bdf7, #0ccdf9, #00d6f1, #00dee0, #00e4c9, #36e8ac); */
-	/* background-image: linear-gradient(to top, #6abff7, 
-	#0ccdf9, #00d9ec, #00e2d1, #36e8ac); */
-
-	background-image: linear-gradient(to top, #5c48c5, #4c63d6, #3f7ae3, #3d90ec, #4aa5f2, #2fb3f7, #13c0f9, #0ccdf9, #00d6f1, #00dee0, #00e4c9, #36e8ac);
-	transform: rotate(-27deg);
-	z-index: -1;
-	position: absolute;
-  left: 50%;
-	top: -28%;
-	border-radius: 80px;
-}
-
 #mainBody {
-	z-index: 900;
+	
+  height: 92.2vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #5834f7, #065dff, #007aff, #0091ff, #01a6ff, #00b4ff, #00c1fd, #0ccdf9, #00d6f1, #00dee0, #00e4c9, #36e8ac);
 }
 
+#mainBody:after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 92.2vh;
+  width: 150%;
+  background-color:white;
+  /* -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg); */
+  transform: rotate(60deg);
+}
 
 /* #body {
 	margin: auto;
@@ -91,13 +89,11 @@ body {
 	box-shadow:none;
 }
 
-/* Search bar-------------------------------------------*/
+/* Search bar*/
 #content {
-	margin-top:10%;
-	width:30%;
-	/* margin-left:5%; */
+	margin-top:200px;
+	margin-left:50%;
 }
-
 #searchbox {
 	height: 25px;
 	width: 50%;
@@ -109,20 +105,17 @@ body {
 }
 
 #searchBtn {
-	width: 150px;
+	width: 200px;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	color:white;
-	border-radius:30px;
-	background-image: linear-gradient(to right, #5c48c5, #476bdb, #3c89e9, #4aa5f2, #6abff7);
 }
 
 #oneline {
 	text-align: center;
 	font-size: 3em;
-	color:rgb(94, 94, 94);
+	color: black;
 }
 
 #modalSignupBtn {
