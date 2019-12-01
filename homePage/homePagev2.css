@@ -1,0 +1,130 @@
+/* Home Page CSS */
+/*
+Color Themes:
+  logo blue:rgb(106,191,247);
+	Light gray: rgb(137, 137, 137);
+	Lighter gray2: rgb(187, 186, 186);
+	Lighter gray3:rgba(189, 189, 189, 0.37);
+
+Style:
+	border radius: 5px;
+*/
+
+
+/* body {
+	margin: 20px;
+	background-image: linear-gradient(to right bottom, #c126c9, #a45be6, #837cf8, #6795ff, #59a9ff, #36b6ff, #10c2ff, #0ccdf9, #00d6f1, #00dee0, #00e4c9, #36e8ac);
+	font-family: 'Noto Sans', sans-serif;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+
+  -webkit-clip-path: polygon(0 0, 0 100px, 100px 80px, 100px 0);
+  clip-path: polygon(0 0, 0 100px, 100px 80px, 100px 0);
+} */
+
+body {
+	height:100%;
+	width:100%;
+}
+
+#mainBody {
+	
+  height: 92.2vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #5834f7, #065dff, #007aff, #0091ff, #01a6ff, #00b4ff, #00c1fd, #0ccdf9, #00d6f1, #00dee0, #00e4c9, #36e8ac);
+}
+
+#mainBody:after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 92.2vh;
+  width: 150%;
+  background-color:white;
+  /* -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg); */
+  transform: rotate(60deg);
+}
+
+/* #body {
+	margin: auto;
+} */
+
+
+.navbar-nav .nav-item .nav-link {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+	color:rgb(187, 186, 186);
+}
+
+#loginBtn {
+	border-color:rgb(137, 137, 137);
+	color:rgb(137, 137, 137);
+	margin-right: 10px;
+}
+
+#loginBtn:hover {
+	background-color:rgb(187, 186, 186);
+	border-color:rgb(187, 186, 186);
+	color:white;	
+}
+
+#navbarSignupBtn {
+	color:white;
+	background-color:rgb(137, 137, 137);
+}
+
+#navbarSignupBtn:hover {	
+	background-color:rgb(187, 186, 186);
+}
+
+#navbarSignupBtn:focus {
+	box-shadow:none;
+}
+
+/* Search bar*/
+#content {
+	margin-top:200px;
+	margin-left:50%;
+}
+#searchbox {
+	height: 25px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 30px;
+	padding: 25px;
+}
+
+#searchBtn {
+	width: 200px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#oneline {
+	text-align: center;
+	font-size: 3em;
+	color: black;
+}
+
+#modalSignupBtn {
+	background-color: rgb(106,191,247);
+	color:white;
+}
+
+#modalSignupBtn:hover {
+	background-color: rgb(143, 210, 255);
+}
+
+
