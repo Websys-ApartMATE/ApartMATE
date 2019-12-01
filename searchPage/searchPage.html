@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ApartMATE</title>
+		<title>searchPage</title>
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="searchPage.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<!--font library-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
@@ -16,7 +13,7 @@
 		<!--Navigation Bar--------------------------------------------->
 		<nav class="navbar navbar-expand-lg bg-white" >
 			<a class="navbar-brand" href="#">
-				<img id="piclogo" src="logo.png" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
+				<img id="piclogo" src="../resources/logo.png" onclick="window.location.href='../homePage/homePage.html'" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
 			</a>
 			<!--Collapsable links on the left-->
 			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,11 +21,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="#">Rent</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Add a Listing</a>
+						<a class="nav-link" href="../addListingPage/addListingPage.html">Add a Listing</a>
 					</li>    
 				</ul>
 				<!--Chat button-->
@@ -129,7 +126,7 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-8 p-0">
-								<img class="img-fluid" src="countryGardenPic.jpg"> 	
+								<img class="img-fluid" src="../resources/countryGardenPic.jpg"> 	
 							</div>
 							<div class="col-lg-4 listingInfo pl-2">
 								<h class="price">$1,783/mo</h>
@@ -169,7 +166,7 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-8 p-0">
-								<img class="img-fluid" src="duncanMeadows.jpg""> 
+								<img class="img-fluid" src="../resources/duncanMeadows.jpg""> 
 							</div>
 							<div class="col-lg-4 listingInfo pl-2">
 								<h class="price">$1,200/mo</h>
@@ -199,7 +196,7 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-8 p-0">
-								<img class="img-fluid" src="hudsonPointe.jpg"> 
+								<img class="img-fluid" src="../resources/hudsonPointe.jpg"> 
 							</div>
 							<div class="listingInfo col-lg-4 pl-2">
 								<h class="price">$900/mo</h>
@@ -222,9 +219,13 @@
 				</div>
 				<!--Map----------------------------------------------->
 				<div id="mapDisplay" class="col-lg-6 m-0 p-0">
-					<img id="map" src="map.png" class="img-fluid" alt="Responsive image">
+					<img id="map" src="../resources/map.png" class="img-fluid" alt="Responsive image">
 				</div>
 			</div>
 		</div>
 	</body>
+	<!--Scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>

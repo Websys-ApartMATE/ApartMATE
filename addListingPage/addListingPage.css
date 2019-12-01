@@ -1,0 +1,68 @@
+/*
+Color Themes:
+	Light gray: rgb(137, 137, 137);
+	Lighter gray2: rgb(187, 186, 186);
+	Lighter gray3:rgba(189, 189, 189, 0.37);
+
+Style:
+	border radius: 5px;
+
+/* navbar---------------------------------------*/
+body {
+	width:100%;
+	height:100%;
+	overflow-y:hidden;
+}
+
+.navbar-nav .nav-item .nav-link {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+	color:rgb(187, 186, 186);
+}
+
+#navbarBtn {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+	border: 1px solid;
+	border-color: rgb(137, 137, 137);
+	border-radius: 5px;
+	background-color: white;
+	padding: 3px 7px 3px 7px;
+}
+
+#navbarBtn:hover {
+	border-color: rgb(187, 186, 186);
+	color:white;
+	background-color: rgb(187, 186, 186);
+}
+
+
+#chatBtn {
+	color:rgb(137, 137, 137);
+}
+
+#chatBtn:hover {	
+	color:rgb(187, 186, 186);
+}
+
+#chatBtn:focus {
+	box-shadow:none;
+}
+
+#profileBtn {
+	color:white;
+	background-color: rgb(137, 137, 137);
+}
+
+#profileBtn:hover {	
+	background-color:rgb(187, 186, 186);
+	border-color:rgb(187, 186, 186);
+}
+
+#profileBtn:focus{
+	box-shadow:none;
+	border-color: rgb(137, 137, 137);
+}

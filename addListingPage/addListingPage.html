@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>addListing</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="addListingPage.css">
+		<!--font library-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<!--Navigation Bar--------------------------------------------->
+		<nav class="navbar navbar-expand-lg bg-white" >
+			<a class="navbar-brand" href="#">
+				<img id="piclogo" src="../resources/logo.png" onclick="window.location.href='../homePage/homePage.html'" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
+			</a>
+			<!--Collapsable links on the left-->
+			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="../searchPage/searchPage.html">Rent</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Add a Listing</a>
+					</li>    
+				</ul>
+				<!--Chat button-->
+				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.html'">
+					<i class="fa fa-comments fa-lg"></i>
+				</button>
+				<!--Profile Dropdown button-->
+				<div class="btn-group">
+					<button type="button" id="profileBtn" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-user-circle fa-lg"></i>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<button class="dropdown-item" type="button" onclick="window.location.href='../profilePage/profile_page.html'">Profile</button>
+						<button class="dropdown-item" type="button" onclick="window.location.href='../homePage/homePage.html'">Sign Out</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--Main Body--------------------------------------------------->
+		<div id="mainBody" class="container-fluid overflow-auto">
+		</div>
+	</body>
+	<!--Scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
