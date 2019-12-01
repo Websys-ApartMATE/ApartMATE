@@ -26,29 +26,6 @@
 #stars{
     margin-left: 35px;
 }
-/* #edit{
-    float: right;
-} */
-#messages{
-    display: block;
-    margin-left: 35px;
-    margin-bottom: 100px;
-}
-
-#message_bar{
-    display: block;
-    /* margin-left: 35px; */
-    margin-right: 35px;
-    background-color:  #6600ff;
-    color: white;
-    padding: 5px;
-}
-#message_content{
-    display: block;
-}
-#message_info{
-    display: inline-block;
-}
 
 #listings{
     display: block;
@@ -64,8 +41,7 @@
     color: white;
     padding: 5px;
 }
-
-#rec_messages{
+#avail_list{
     display: block;
     /* margin-left: 35px; */
     margin-right: 35px;
@@ -109,6 +85,8 @@
 .individualListing {
     /* margin-top:10px; */
     box-shadow: 10px 10px 5px rgb(201, 199, 199);
+    margin: 10px;
+    border: 2px solid;    
 }
 
 .listingPic {
