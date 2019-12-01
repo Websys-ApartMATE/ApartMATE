@@ -29,7 +29,7 @@
 
 #listings{
     display: block;
-    margin-left: 35px;
+    /* margin-left: 35px; */
     margin-bottom: 100px;
 }
 
@@ -44,16 +44,28 @@
 #avail_list{
     display: block;
     /* margin-left: 35px; */
+    margin-right: 35px;
     background-color:  #6600ff;
     color: white;
     padding: 5px;
-    text-align: center;
+    margin-bottom: 10px;
+    /* width: 680px; */
+    width: 120%;
+}
+#prev_view{
+    display: block;
+    /* margin-left: 35px; */
+    margin-right: 35px;
+    background-color:  #6600ff;
+    color: white;
+    padding: 5px;
+    width: 350px;
 }
 #listings {
     height: 85vh;
     overflow-y: scroll;
-    overflow-x: hidden;
-    border: 1px solid rgb(187, 187, 187);
+    /* overflow-x: hidden; */
+    /* border: 1px solid rgb(187, 187, 187); */
  } 
 
 ::-webkit-scrollbar {
@@ -84,4 +96,14 @@
 
 .listingInfo {
     padding-top: 20px;
-} 
+}
+
+.col-lg-8{
+    /* background-color: lightblue; */
+    border: 2px solid #6600ff;
+    
+}
+
+.col-lg-6{
+    margin-top: 10px;
+}
