@@ -88,8 +88,15 @@ if ($data['msg_to'] == $user_id) {
                     <?php $listOfConv = array();
                     for ($i = 0; $i < count($data); $i++) {
                         if (!in_array($data[$i]['msg_to'], $listOfConv) && !in_array($data[$i]['msg_from'], $listOfConv)) {
+                            if ($data[$i]['msg_to'] != $user_id) {
+                                array_push($listOfConv, $data[$i]['msg_to']);
+                                $conversation_id = $data[$i]['msg_to'];
+                            } else if ($data[$i]['msg_from'] != $user_id) {
+                                array_push($listOfConv, $data[$i]['msg_from']);
+                                $conversation_id = $data[$i]['msg_from'];
+                            }
                             ?>
-                            <div class="chatList activeChat">
+                            <div class="chatList <?php echo "conv-" . $conversation_id ?>">
                                 <div class="chatPeople">
                                     <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"
                                                               alt="sunil"></div>
@@ -100,24 +107,9 @@ if ($data['msg_to'] == $user_id) {
                                 </div>
                             </div>
                             <?php
-                            if ($data[$i]['msg_to'] != $user_id) {
-                                array_push($listOfConv, $data[$i]['msg_from']);
-                            } else if ($data[$i]['msg_from'] != $user_id) {
-                                array_push($listOfConv, $data[$i]['msg_from']);
-                            }
                         }
                     }
                     ?>
-                    <!--                    <div class="chatList">-->
-                    <!--                        <div class="chatPeople">-->
-                    <!--                            <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"-->
-                    <!--                                                      alt="sunil"></div>-->
-                    <!--                            <div class="chatIb">-->
-                    <!--                                <h5>Mary Tedisco</h5>-->
-                    <!--                                <p>Rent is $500/month.</p>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
                 </div>
             </div>
             <div class="messageBox">
