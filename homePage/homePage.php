@@ -12,7 +12,7 @@
 	<body>
 		<!--Navigation Bar--------------------------------------------------------------------------------------->
 		<nav class="navbar navbar-expand-lg" >
-			<a class="navbar-brand" href="../homePage/homePage.html">
+			<a class="navbar-brand" href="../homePage/homePage.php">
 				<img id="piclogo" src="../resources/logo.png"width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
 			</a>
 			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -21,10 +21,10 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="../searchPage/searchPage.html">Rent</a>
+						<a class="nav-link" href="../searchPage/searchPage.php">Rent</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="../addListingPage/addListingPage.html">Add a Listing</a>
+						<a class="nav-link" href="../addListingPage/addListingPage.php">Add a Listing</a>
 					</li>    
 				</ul>
 				<!--Log in Form------------------------------------------------------------------------------------>
@@ -119,3 +119,4 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
+
