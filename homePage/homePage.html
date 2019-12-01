@@ -51,16 +51,25 @@
 		</nav>
 
 		<div id="backgroundImg"></div>
+		<img id="houseImg" src="../resources/house3.png" width="450" height="400">
 		<div id="mainBody">
 			<!--Search bar-------------------------------------------------------------------------------------->
-			<div id="content">
-				<form action="../searchPage/searchPage.php">
-					<h3 id="oneline">Find your home away from home.</h3>
-					<input id="searchbox" type="text" name="zip" placeholder="ZIP Code Here">
-					<input id="searchBtn" class="btn btn-light" type="submit" value="Search">
-				</form>
-			</div>
+			<form id="content" action="../searchPage/searchPage.php">
+				<div id="oneline">
+					<h>Find your home away from home.</h>
+				</div>
+				<!-- <input id="searchbox" type="text" name="zip" placeholder="ZIP Code Here">
+				<input id="searchBtn" class="btn btn-light" type="submit" value="Search"> -->
 
+				<!--Search input field-->
+				<div id="searchBar" class="input-group">
+					<input id="zipcode" type="text" class="form-control" placeholder="Enter Zipcode">
+					<div class="input-group-append">
+						<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button">Search
+						</button>
+					</div>
+				</div>		
+			</form>
 			<!--Sign up modal---------------------------------------------------------------------------------->
 			<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
