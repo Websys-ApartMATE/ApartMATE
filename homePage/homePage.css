@@ -32,19 +32,13 @@ body {
 	z-index: -1;
 	overflow: hidden;
 	left: 60%;
-	top: 22%;
+	top: 20%;
 	position: absolute;
 }
 
 #mainBody {
 	z-index: 900;
 }
-
-
-/* #body {
-	margin: auto;
-} */
-
 
 .navbar-nav .nav-item .nav-link {
 	font-size:1.1rem;
@@ -56,8 +50,8 @@ body {
 }
 
 #loginBtn {
-	border-color:white;
-	color:white;
+	border-color:rgb(99, 99, 99);
+	color:rgb(99, 99, 99);
 	margin-right: 10px;
 }
 
