@@ -13,7 +13,7 @@
 		<!--Navigation Bar--------------------------------------------->
 		<nav class="navbar navbar-expand-lg bg-white" >
 			<a class="navbar-brand" href="#">
-				<img id="piclogo" src="../resources/logo.png" onclick="window.location.href='../homePage/homePage.html'" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
+				<img id="piclogo" src="../resources/logo.png" onclick="window.location.href='../homePage/homePage.php'" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
 			</a>
 			<!--Collapsable links on the left-->
 			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -25,11 +25,11 @@
 						<a class="nav-link" href="#">Rent</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="../addListingPage/addListingPage.html">Add a Listing</a>
+						<a class="nav-link" href="../addListingPage/addListingPage.php">Add a Listing</a>
 					</li>    
 				</ul>
 				<!--Chat button-->
-				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.html'">
+				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.php'">
 					<i class="fa fa-comments fa-lg"></i>
 				</button>
 				<!--Profile Dropdown button-->
@@ -38,8 +38,8 @@
 						<i class="fas fa-user fa-lg"></i>
 					</button>
 					<div class="dropdown-menu dropdown-menu-right">
-						<button class="dropdown-item" type="button" onclick="window.location.href='../profilePage/profile_page.html'">Profile</button>
-						<button class="dropdown-item" type="button" onclick="window.location.href='../homePage/homePage.html'">Sign Out</button>
+						<button class="dropdown-item" type="button" onclick="window.location.href='../profilePage/profilePage.php'">Profile</button>
+						<button class="dropdown-item" type="button" onclick="window.location.href='../homePage/homePage.php'">Sign Out</button>
 					</div>
 				</div>
 			</div>
