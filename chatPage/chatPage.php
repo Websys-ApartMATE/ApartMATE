@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <?php
 
+$con = new mysqli("localhost", 'test', 'kuzmin', 'ApartMATE');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $msg_to = $_POST['msg_to'];
+    $msg_from = $_POST['msg_from'];
+    $contents = $_POST['contents'];
+    $post_query = "INSERT INTO chat (msg_to, msg_from, contents) VALUES ($msg_to, $msg_from, $contents)";
+    $con->query($post_query);
+
+}
+
 $user_id = 1;
 
-$con = new mysqli("localhost", 'test', 'kuzmin', 'ApartMATE');
 $query = "SELECT timestamp, msg_to, msg_from, u.full_name, u2.full_name, contents FROM chat
 INNER JOIN users u on chat.msg_to = u.user_id
 INNER JOIN users u2 on chat.msg_from = u2.user_id 
