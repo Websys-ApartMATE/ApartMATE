@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2019 at 10:41 PM
+-- Generation Time: Dec 02, 2019 at 10:49 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.0
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -21,13 +22,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `ApartMATE`
 --
+CREATE DATABASE IF NOT EXISTS `ApartMATE` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `ApartMATE`;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `chat`
 --
+-- Creation: Dec 02, 2019 at 10:40 PM
+-- Last update: Dec 02, 2019 at 10:41 PM
+--
 
+DROP TABLE IF EXISTS `chat`;
 CREATE TABLE `chat` (
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `msg_to` smallint(3) NOT NULL,
@@ -36,10 +43,23 @@ CREATE TABLE `chat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- RELATIONSHIPS FOR TABLE `chat`:
+--   `msg_from`
+--       `users` -> `user_id`
+--   `msg_to`
+--       `users` -> `user_id`
+--
+
+--
+-- Truncate table before insert `chat`
+--
+
+TRUNCATE TABLE `chat`;
+--
 -- Dumping data for table `chat`
 --
 
-INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
+INSERT DELAYED IGNORE INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
 ('2019-11-28 02:38:13', 1, 2, 'Hello World'),
 ('2019-11-28 05:31:43', 2, 1, 'Hello, This is Andrew Smith. How are you doing today?');
 
@@ -48,7 +68,10 @@ INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
 --
 -- Table structure for table `listings`
 --
+-- Creation: Nov 30, 2019 at 01:03 AM
+--
 
+DROP TABLE IF EXISTS `listings`;
 CREATE TABLE `listings` (
   `listing_id` int(100) NOT NULL,
   `zip` int(11) NOT NULL,
@@ -68,10 +91,21 @@ CREATE TABLE `listings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- RELATIONSHIPS FOR TABLE `listings`:
+--   `landlord`
+--       `users` -> `user_id`
+--
+
+--
+-- Truncate table before insert `listings`
+--
+
+TRUNCATE TABLE `listings`;
+--
 -- Dumping data for table `listings`
 --
 
-INSERT INTO `listings` (`listing_id`, `zip`, `address`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `type`, `utilites`, `landlord`, `Picture`, `name`) VALUES
+INSERT DELAYED IGNORE INTO `listings` (`listing_id`, `zip`, `address`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `type`, `utilites`, `landlord`, `Picture`, `name`) VALUES
 (1, 12180, '110 Colleen Rd, Troy, New York', 1783, 1200, 2, 1, 'High Speed Internet Access</br>\r\nHeating<br/>\r\nCeiling Fans<br/>\r\nSmoke Free', 'Mondays 5pm-9pm', 3, 'Lease', 0, 1, 'countryGardenPic.jpg', 'Country Garden Apartments'),
 (2, 12180, '2 Stanton St, Troy, New York', 900, 700, 2, 2, 'High Speed Internet Access<br/>\r\nHeating<br/>\r\nSmoke Free<br/>', 'Monday 5pm-9pm', 3, 'Lease', 1, 3, 'hudsonPointe.jpg', 'Hudson Pointe'),
 (3, 12180, '6 Ridgeway Ln, Troy, New York', 1200, 1000, 3, 1, 'Cable Ready<br/>\r\nStorage Units<br/>\r\nTub/Shower', 'Mondays 5pm-9pm', 3, 'Lease', 1, 3, 'duncanMeadows.jpg', 'The Summit at Duncan Meadows');
@@ -81,7 +115,10 @@ INSERT INTO `listings` (`listing_id`, `zip`, `address`, `price`, `sqft`, `bed`, 
 --
 -- Table structure for table `users`
 --
+-- Creation: Nov 30, 2019 at 04:58 PM
+--
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` smallint(3) NOT NULL,
   `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
@@ -94,10 +131,19 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- RELATIONSHIPS FOR TABLE `users`:
+--
+
+--
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
+--
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `email`, `password`, `full_name`, `phone_number`, `dob`, `rating`, `user_type`) VALUES
+INSERT DELAYED IGNORE INTO `users` (`user_id`, `email`, `password`, `full_name`, `phone_number`, `dob`, `rating`, `user_type`) VALUES
 (1, 'smitha24@rpi.edu', 'test', 'Andrew Smith', 1111111111, '1998-11-18', 5, 0),
 (2, 'test@rpi.edu', 'test2', 'Bandrew Smith', 1111111112, '1978-02-25', 5, 0),
 (3, 'test2@rpi.edu', 'test3', 'Candrew Smith', 1111111222, '1950-01-01', 5, 0);
@@ -160,12 +206,100 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `listings`
   ADD CONSTRAINT `listings_ibfk_1` FOREIGN KEY (`landlord`) REFERENCES `users` (`user_id`);
+
+
+--
+-- Metadata
+--
+USE `phpmyadmin`;
+
+--
+-- Metadata for table chat
+--
+
+--
+-- Truncate table before insert `pma__column_info`
+--
+
+TRUNCATE TABLE `pma__column_info`;
+--
+-- Truncate table before insert `pma__table_uiprefs`
+--
+
+TRUNCATE TABLE `pma__table_uiprefs`;
+--
+-- Truncate table before insert `pma__tracking`
+--
+
+TRUNCATE TABLE `pma__tracking`;
+--
+-- Metadata for table listings
+--
+
+--
+-- Truncate table before insert `pma__column_info`
+--
+
+TRUNCATE TABLE `pma__column_info`;
+--
+-- Truncate table before insert `pma__table_uiprefs`
+--
+
+TRUNCATE TABLE `pma__table_uiprefs`;
+--
+-- Truncate table before insert `pma__tracking`
+--
+
+TRUNCATE TABLE `pma__tracking`;
+--
+-- Metadata for table users
+--
+
+--
+-- Truncate table before insert `pma__column_info`
+--
+
+TRUNCATE TABLE `pma__column_info`;
+--
+-- Truncate table before insert `pma__table_uiprefs`
+--
+
+TRUNCATE TABLE `pma__table_uiprefs`;
+--
+-- Truncate table before insert `pma__tracking`
+--
+
+TRUNCATE TABLE `pma__tracking`;
+--
+-- Metadata for database ApartMATE
+--
+
+--
+-- Truncate table before insert `pma__bookmark`
+--
+
+TRUNCATE TABLE `pma__bookmark`;
+--
+-- Truncate table before insert `pma__relation`
+--
+
+TRUNCATE TABLE `pma__relation`;
+--
+-- Truncate table before insert `pma__savedsearches`
+--
+
+TRUNCATE TABLE `pma__savedsearches`;
+--
+-- Truncate table before insert `pma__central_columns`
+--
+
+TRUNCATE TABLE `pma__central_columns`;SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'test'@'%' IDENTIFIED BY PASSWORD '*C44E1F4F0C910DD1FDB5DCE5CA243964A07E2EDF'; /*PASSWORD: kuzmin*/
+GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'test'@'%' IDENTIFIED BY PASSWORD '*C44E1F4F0C910DD1FDB5DCE5CA243964A07E2EDF'; /*password is kuzmin*/
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON `ApartMATE`.* TO 'test'@'%';
