@@ -64,7 +64,6 @@ if ($data['msg_to'] == $user_id) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="chatPage.js"></script>
 </head>
 <body>
 <!--Navigation Bar--------------------------------------------------------------------------------------->
@@ -106,7 +105,7 @@ if ($data['msg_to'] == $user_id) {
                                 $conversation_id = $data[$i]['msg_from'];
                             }
                             ?>
-                            <div class="chatList <?php echo "conv-" . $conversation_id ?>">
+                            <div class="chatList <?php echo "conv-" . $conversation_id?>">
                                 <div class="chatPeople">
                                     <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"
                                                               alt="sunil"></div>
@@ -142,4 +141,5 @@ if ($data['msg_to'] == $user_id) {
     </div>
 </div>
 </body>
+<script src="chatPage.js"></script>
 </html>
