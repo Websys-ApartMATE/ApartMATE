@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <?php
-                    $conn=mysqli_connect("localhost","test","*C44E1F4F0C910DD1FDB5DCE5CA243964A07E2EDF","ApartMATE");
+                    $conn=mysqli_connect("localhost","test","kuzmin","ApartMATE");
                     $id = $_GET["user"];
                     $usersql = "SELECT * FROM `users` WHERE `user_id` = " . $id;
                     $userres = mysqli_query($conn, $usersql);

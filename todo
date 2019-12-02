@@ -1,0 +1,14 @@
+HOME:
+* Make the "Enter Zipcode" into a form that will send zip -> searchPage.php
+
+SEARCH:
+* Dynamically generate listings 
+* Make the search results go to a listing page with id
+* Modal should load listing page
+
+LISTING:
+* Pull info from database.
+* Get it working
+
+ADD A LISTING:
+* Listing page should add to database

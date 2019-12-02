@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contents = $_POST['contents'];
     $post_query = "INSERT INTO chat (msg_to, msg_from, contents) VALUES ($msg_to, $msg_from, '$contents')";
     $con->query($post_query);
-    print_r($post_query);
-    print_r($con->error);
+    # print_r($post_query);
+    # print_r($con->error);
 
 }
 
