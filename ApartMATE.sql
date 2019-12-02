@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2019 at 09:55 PM
+-- Generation Time: Dec 02, 2019 at 10:20 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.0
 
@@ -56,26 +56,24 @@ INSERT INTO `chat` (`msg_id`, `timestamp`, `msg_to`, `msg_from`, `contents`) VAL
 CREATE TABLE `listings` (
   `listing_id` int(100) NOT NULL,
   `zip` int(11) NOT NULL,
-  `address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `street` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `state` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `price` int(100) NOT NULL,
   `sqft` int(50) NOT NULL,
   `bed` int(2) NOT NULL,
   `bath` int(2) NOT NULL,
   `description` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `times` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `rating` int(2) NOT NULL,
-  `type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `utilites` int(1) NOT NULL,
-  `landlord` smallint(3) NOT NULL,
-  `Picture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `times` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `listings`
 --
 
-INSERT INTO `listings` (`listing_id`, `zip`, `address`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `type`, `utilites`, `landlord`, `Picture`) VALUES
-(1, 12180, '110 Colleen Rd, Troy, New York', 1783, 1200, 2, 1, 'This is a great place to rent.', 'Mondays 5pm-9pm', 3, 'Lease', 0, 1, NULL);
+INSERT INTO `listings` (`listing_id`, `zip`, `name`, `street`, `city`, `state`, `price`, `sqft`, `bed`, `bath`, `description`, `times`) VALUES
+(1, 12180, '', '110 Colleen Rd, Troy, New York', '', '', 1783, 1200, 2, 1, 'This is a great place to rent.', 'Mondays 5pm-9pm');
 
 -- --------------------------------------------------------
 
@@ -119,7 +117,6 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `listings`
   ADD PRIMARY KEY (`listing_id`),
-  ADD KEY `landlord` (`landlord`),
   ADD KEY `zip` (`zip`);
 
 --
@@ -160,12 +157,6 @@ ALTER TABLE `users`
 ALTER TABLE `chat`
   ADD CONSTRAINT `chat_ibfk_1` FOREIGN KEY (`msg_from`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `chat_ibfk_2` FOREIGN KEY (`msg_to`) REFERENCES `users` (`user_id`);
-
---
--- Constraints for table `listings`
---
-ALTER TABLE `listings`
-  ADD CONSTRAINT `listings_ibfk_1` FOREIGN KEY (`landlord`) REFERENCES `users` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
