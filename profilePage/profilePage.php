@@ -14,39 +14,7 @@
     </head>
     <body>
         <!--Navigation Bar--------------------------------------------->
-		<nav class="navbar navbar-expand-lg bg-white" >
-			<a class="navbar-brand" href="../homePage/homePage.php">
-				<img id="piclogo" src="../resources/logo.png" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
-			</a>
-			<!--Collapsable links on the left-->
-			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="collapsibleNavbar">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="../searchPage/searchPage.php">Rent</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../addListingPage/addListingPage.php">Add a Listing</a>
-					</li>    
-				</ul>
-				<!--Chat button-->
-				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.html'">
-					<i class="fa fa-comments fa-lg"></i>
-				</button>
-				<!--Profile Dropdown button-->
-				<div class="btn-group">
-					<button type="button" id="profileBtn" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fas fa-user fa-lg"></i>
-					</button>
-					<div class="dropdown-menu dropdown-menu-right">
-						<button class="dropdown-item" type="button" onclick="window.location.href='../profilePage/profilePage.php'">Profile</button>
-						<button class="dropdown-item" type="button" onclick="window.location.href='../homePage/homePage.php'">Sign Out</button>
-					</div>
-				</div>
-			</div>
-		</nav>
+		<?php include('../navBar/navBar.php')?>
         <div class="container">
             <div class="row">
                 <?php
