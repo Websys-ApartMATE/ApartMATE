@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 29, 2019 at 11:54 PM
+-- Generation Time: Dec 02, 2019 at 09:55 PM
 -- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- PHP Version: 7.4.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,6 +31,7 @@ USE `ApartMATE`;
 --
 
 CREATE TABLE `chat` (
+  `msg_id` int(11) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `msg_to` smallint(3) NOT NULL,
   `msg_from` smallint(3) NOT NULL,
@@ -41,9 +42,10 @@ CREATE TABLE `chat` (
 -- Dumping data for table `chat`
 --
 
-INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
-('2019-11-28 02:38:13', 1, 2, 'Hello World'),
-('2019-11-28 05:31:43', 2, 1, 'Hello, This is Andrew Smith. How are you doing today?');
+INSERT INTO `chat` (`msg_id`, `timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
+(1, '2019-11-28 02:38:13', 1, 2, 'Hello World'),
+(2, '2019-11-30 05:25:49', 2, 1, 'Hello, This is Andrew Smith. How are you doing today?'),
+(3, '2019-11-30 06:11:13', 1, 3, 'Hello How is Your Day Going today');
 
 -- --------------------------------------------------------
 
@@ -108,6 +110,7 @@ INSERT INTO `users` (`user_id`, `email`, `password`, `full_name`, `phone_number`
 -- Indexes for table `chat`
 --
 ALTER TABLE `chat`
+  ADD PRIMARY KEY (`msg_id`),
   ADD KEY `msg_from` (`msg_from`),
   ADD KEY `msg_to` (`msg_to`);
 
@@ -128,6 +131,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `listings`
@@ -165,8 +174,4 @@ COMMIT;
 
 GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'test'@'%' IDENTIFIED BY PASSWORD '*C44E1F4F0C910DD1FDB5DCE5CA243964A07E2EDF';
 
-GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'test'@'localhost' IDENTIFIED BY PASSWORD '*C44E1F4F0C910DD1FDB5DCE5CA243964A07E2EDF';
-
 GRANT SELECT, INSERT, UPDATE, DELETE ON `ApartMATE`.* TO 'test'@'%';
-
-GRANT SELECT, INSERT, UPDATE, DELETE ON `ApartMATE`.* TO 'test'@'localhost';
