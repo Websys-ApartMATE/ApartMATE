@@ -26,33 +26,10 @@
 #stars{
     margin-left: 35px;
 }
-/* #edit{
-    float: right;
-} */
-#messages{
-    display: block;
-    margin-left: 35px;
-    margin-bottom: 100px;
-}
-
-#message_bar{
-    display: block;
-    /* margin-left: 35px; */
-    margin-right: 35px;
-    background-color:  #6600ff;
-    color: white;
-    padding: 5px;
-}
-#message_content{
-    display: block;
-}
-#message_info{
-    display: inline-block;
-}
 
 #listings{
     display: block;
-    margin-left: 35px;
+    /* margin-left: 35px; */
     margin-bottom: 100px;
 }
 
@@ -64,8 +41,7 @@
     color: white;
     padding: 5px;
 }
-
-#rec_messages{
+#avail_list{
     display: block;
     /* margin-left: 35px; */
     margin-right: 35px;
@@ -73,6 +49,8 @@
     color: white;
     padding: 5px;
     margin-bottom: 10px;
+    /* width: 680px; */
+    width: 120%;
 }
 #prev_view{
     display: block;
@@ -81,12 +59,13 @@
     background-color:  #6600ff;
     color: white;
     padding: 5px;
+    width: 350px;
 }
 #listings {
     height: 85vh;
     overflow-y: scroll;
-    overflow-x: hidden;
-    border: 1px solid rgb(187, 187, 187);
+    /* overflow-x: hidden; */
+    /* border: 1px solid rgb(187, 187, 187); */
  } 
 
 ::-webkit-scrollbar {
@@ -106,6 +85,8 @@
 .individualListing {
     /* margin-top:10px; */
     box-shadow: 10px 10px 5px rgb(201, 199, 199);
+    margin: 10px;
+    border: 2px solid;    
 }
 
 .listingPic {
@@ -115,4 +96,14 @@
 
 .listingInfo {
     padding-top: 20px;
+}
+
+.col-lg-8{
+    /* background-color: lightblue; */
+    border: 2px solid #6600ff;
+    
+}
+
+.col-lg-6{
+    margin-top: 10px;
 }
