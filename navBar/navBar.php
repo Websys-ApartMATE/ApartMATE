@@ -76,7 +76,7 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right">
                 <button class="dropdown-item" type="button"
-                    onclick="window.location.href='../profilePage/profilePage.php'">Profile</button>
+                    onclick="window.location.href='../profilePage/profilePage.php?user=1'">Profile</button>
                 <button class="dropdown-item" type="button"
                     onclick="window.location.href='../homePage/homePage.php'">Sign Out</button>
             </div>
