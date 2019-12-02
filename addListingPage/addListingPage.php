@@ -12,8 +12,8 @@
 	<body>
 		<!--Navigation Bar--------------------------------------------->
 		<nav class="navbar navbar-expand-lg bg-white" >
-			<a class="navbar-brand" href="#">
-				<img id="piclogo" src="../resources/logo.png" onclick="window.location.href='../homePage/homePage.php'" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
+			<a class="navbar-brand" href="../homePage/homePage.php">
+				<img id="piclogo" src="../resources/logo.png" width="130" height="27" class="d-inline-block align-top" draggable = "false" alt="ApartMATE logo"/>
 			</a>
 			<!--Collapsable links on the left-->
 			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,7 +29,7 @@
 					</li>    
 				</ul>
 				<!--Chat button-->
-				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.php'">
+				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.html'">
 					<i class="fa fa-comments fa-lg"></i>
 				</button>
 				<!--Profile Dropdown button-->

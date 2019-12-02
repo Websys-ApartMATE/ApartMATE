@@ -29,7 +29,7 @@
 					</li>    
 				</ul>
 				<!--Chat button-->
-				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.php'">
+				<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.html'">
 					<i class="fa fa-comments fa-lg"></i>
 				</button>
 				<!--Profile Dropdown button-->
