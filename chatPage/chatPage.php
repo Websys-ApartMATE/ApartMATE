@@ -69,26 +69,7 @@ if ($data['msg_to'] == $user_id) {
 </head>
 <body>
 <!--Navigation Bar--------------------------------------------------------------------------------------->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img id="piclogo" src="logo.png" alt="ApartMATE logo"/></a>
-    <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse navbar-light" id="collapsibleNavbar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Rent</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Add a Listing</a>
-            </li>
-        </ul>
-        <button type="button" class="btn btn-outline-secondary"
-                onclick="window.location.href='../homePage/homePage.html'"
-        ">Sign Out</button>
-    </div>
-</nav>
-
+<?php include('../navBar/navBar.php')?>
 <!--Message Box--------------------------------------------------------------------------------------->
 <div class="container">
     <h3 class=" text-center">Messaging</h3>

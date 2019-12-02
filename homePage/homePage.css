@@ -40,40 +40,6 @@ body {
 	z-index: 900;
 }
 
-.navbar-nav .nav-item .nav-link {
-	font-size:1.1rem;
-	color:rgb(137, 137, 137);
-}
-.navbar-nav .nav-item.active .nav-link,
-.navbar-nav .nav-item:hover .nav-link {
-	color:rgb(187, 186, 186);
-}
-
-#loginBtn {
-	border-color:rgb(99, 99, 99);
-	color:rgb(99, 99, 99);
-	margin-right: 10px;
-}
-
-#loginBtn:hover {
-	background-color:rgb(187, 186, 186);
-	border-color:rgb(187, 186, 186);
-	color:white;	
-}
-
-#navbarSignupBtn {
-	color:white;
-	background-color:rgb(137, 137, 137);
-}
-
-#navbarSignupBtn:hover {	
-	background-color:rgb(187, 186, 186);
-}
-
-#navbarSignupBtn:focus {
-	box-shadow:none;
-}
-
 /* Search bar-------------------------------------------*/
 #content {
 	margin-top: 10%;
@@ -113,14 +79,3 @@ body {
 	color:rgb(94, 94, 94);
 	width:50%;
 }
-
-#modalSignupBtn {
-	background-color: rgb(106,191,247);
-	color:white;
-}
-
-#modalSignupBtn:hover {
-	background-color: rgb(143, 210, 255);
-}
-
-
