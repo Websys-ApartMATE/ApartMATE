@@ -1,3 +1,4 @@
+/*Navbar---------------------------------*/
 .navbar-nav .nav-item .nav-link {
 	font-size:1.1rem;
 	color:rgb(137, 137, 137);
@@ -7,16 +8,45 @@
 	color:rgb(187, 186, 186);
 }
 
-#loginBtn {
-	border-color:rgb(99, 99, 99);
-	color:rgb(99, 99, 99);
-	margin-right: 10px;
+#navbarBtn {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+	border: 1px solid;
+	border-color: rgb(137, 137, 137);
+	border-radius: 5px;
+	background-color: white;
+	padding: 3px 7px 3px 7px;
 }
 
-#loginBtn:hover {
-	background-color:rgb(187, 186, 186);
-	border-color:rgb(187, 186, 186);
-	color:white;	
+#navbarBtn:hover {
+	border-color: rgb(187, 186, 186);
+	color:white;
+	background-color: rgb(187, 186, 186);
+}
+
+#chatBtn {
+	color:rgb(137, 137, 137);
+}
+
+#chatBtn:hover {	
+	color:rgb(187, 186, 186);
+}
+
+#chatBtn:focus {
+	box-shadow:none;
+}
+
+#profileBtn {
+    color:rgb(137, 137, 137);
+    border:none;
+}
+
+#profileBtn:hover {	
+    color:rgb(187, 186, 186);
+}
+
+#profileBtn:focus{
+    box-shadow:none;
 }
 
 #navbarSignupBtn {
