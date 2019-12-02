@@ -7,8 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $msg_to = $_POST['msg_to'];
     $msg_from = $_POST['msg_from'];
     $contents = $_POST['contents'];
-    $post_query = "INSERT INTO chat (msg_to, msg_from, contents) VALUES ($msg_to, $msg_from, $contents)";
+    $post_query = "INSERT INTO chat (msg_to, msg_from, contents) VALUES ($msg_to, $msg_from, '$contents')";
     $con->query($post_query);
+    print_r($post_query);
+    print_r($con->error);
 
 }
 
@@ -130,11 +132,13 @@ if ($data['msg_to'] == $user_id) {
                     ?>
                 </div>
                 <div class="typeMessage">
-                    <div class="inputTypeMessage">
-                        <input type="text" class="writeMessage" placeholder="Type a message"/>
+                    <form class="inputTypeMessage" action="chatPage.php" method="post">
+                        <input type="hidden" name="msg_to" id="msg_to">
+                        <input type="hidden" name="msg_from" id="msg_from">
+                        <input type="text" class="writeMessage" placeholder="Type a message" name="contents" />
                         <button class="messageSendBtn" type="button"><i class="fa fa-paper-plane-o"
                                                                         aria-hidden="true"></i></button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
