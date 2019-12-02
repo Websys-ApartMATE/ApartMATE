@@ -42,7 +42,7 @@
 							<input type="text" class="form-control" id="password" placeholder="Password">
 						</div>
 						<div class="col-auto">
-							<button type="submit" id="loginBtn" class="btn">Log In</button>
+							<button type="button" id="loginBtn" class="btn" onclick="window.location.href='../searchPage/searchPage.php'">Log In</button>
 						</div>
 					</div>
 				</form>
@@ -62,7 +62,7 @@
 				<div id="searchBar" class="input-group">
 					<input id="zipcode" type="text" class="form-control" placeholder="Enter Zipcode">
 					<div class="input-group-append">
-						<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button">Search
+						<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button" onclick="window.location.href='../searchPage/searchPage.php'">Search
 						</button>
 					</div>
 				</div>		
@@ -107,7 +107,7 @@
 							</div>
 						</div>
 						<div class="modal-footer d-flex justify-content-center">
-							<button id="modalSignupBtn"class="btn">Sign up</button>
+							<button type="button" id="modalSignupBtn" class="btn" onclick="window.location.href='../searchPage/searchPage.php'">Sign up</button>
 						</div>
 					</div>
 				</div>
