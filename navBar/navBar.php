@@ -3,7 +3,7 @@
 ?>
 </style>
 <!--Navbar----------------------------------------------------------------------------------------->
-<nav class="navbar navbar-expand-lg">
+<!--!!!<nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="../homePage/homePage.php">
         <img id="piclogo" src="../resources/logo.png" width="130" height="27" class="d-inline-block align-top"
             draggable="false" alt="ApartMATE logo" />
@@ -21,7 +21,7 @@
             </li>
         </ul>
         <!--Log in Form------------------------------------------------------------------------------------>
-        <form>
+        <!--!!!<form>
             <div class="form-row align-items-center">
                 <div class="col-auto">
                     <div class="input-group">
@@ -43,16 +43,16 @@
         <button type="button" id="navbarSignupBtn" class="btn" data-toggle="modal" data-target="#modalRegisterForm">Sign
             Up</button>
     </div>
-</nav>
+</nav>-->
 
 <!--Logged in navbar------------------------------------------------------------------------------->
-<!--!!!<nav class="navbar navbar-expand-lg bg-white">
+<nav class="navbar navbar-expand-lg bg-white">
     <a class="navbar-brand" href="../homePage/homePage.php">
         <img id="piclogo" src="../resources/logo.png" width="130" height="27" class="d-inline-block align-top"
             draggable="false" alt="ApartMATE logo" />
     </a>
     <!--Collapsable links on the left-->
-    <!--!!!<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -65,11 +65,11 @@
             </li>
         </ul>
         <!--Chat button-->
-        <!--!!!<button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.html'">
+        <button type="button" id="chatBtn" class="btn" onclick="window.location.href='../chatPage/chatPage.php'">
             <i class="fa fa-comments fa-lg"></i>
         </button>
         <!--Profile Dropdown button-->
-        <!--!!!<div class="btn-group">
+        <div class="btn-group">
             <button type="button" id="profileBtn" class="btn dropdown-toggle" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user fa-lg"></i>
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-</nav>-->
+</nav>
 
 <!--Register modal--------------------------------------------------------------------------------->
 <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

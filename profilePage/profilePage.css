@@ -4,57 +4,6 @@ body {
 	height:100%;
 }
 
-/*Navbar---------------------------------*/
-.navbar-nav .nav-item .nav-link {
-	font-size:1.1rem;
-	color:rgb(137, 137, 137);
-}
-.navbar-nav .nav-item.active .nav-link,
-.navbar-nav .nav-item:hover .nav-link {
-	color:rgb(187, 186, 186);
-}
-
-#navbarBtn {
-	font-size:1.1rem;
-	color:rgb(137, 137, 137);
-	border: 1px solid;
-	border-color: rgb(137, 137, 137);
-	border-radius: 5px;
-	background-color: white;
-	padding: 3px 7px 3px 7px;
-}
-
-#navbarBtn:hover {
-	border-color: rgb(187, 186, 186);
-	color:white;
-	background-color: rgb(187, 186, 186);
-}
-
-#chatBtn {
-	color:rgb(137, 137, 137);
-}
-
-#chatBtn:hover {	
-	color:rgb(187, 186, 186);
-}
-
-#chatBtn:focus {
-	box-shadow:none;
-}
-
-#profileBtn {
-    color:rgb(137, 137, 137);
-    border:none;
-}
-
-#profileBtn:hover {	
-    color:rgb(187, 186, 186);
-}
-
-#profileBtn:focus{
-    box-shadow:none;
-}
-
 /* Content-----------------------------*/
 #content{
     padding: 25px;
