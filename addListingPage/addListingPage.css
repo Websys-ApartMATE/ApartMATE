@@ -1,0 +1,95 @@
+/*
+Color Themes:
+    logo blue:rgb(106,191,247);
+	Light gray: rgb(137, 137, 137);
+	Lighter gray2: rgb(187, 186, 186);
+	Lighter gray3:rgba(189, 189, 189, 0.37);
+
+Style:
+	border radius: 5px;
+
+/* navbar---------------------------------------*/
+body {
+	width:100%;
+	height:100%;
+}
+
+.navbar-nav .nav-item .nav-link {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+	color:rgb(187, 186, 186);
+}
+
+#navbarBtn {
+	font-size:1.1rem;
+	color:rgb(137, 137, 137);
+	border: 1px solid;
+	border-color: rgb(137, 137, 137);
+	border-radius: 5px;
+	background-color: white;
+	padding: 3px 7px 3px 7px;
+}
+
+#navbarBtn:hover {
+	border-color: rgb(187, 186, 186);
+	color:white;
+	background-color: rgb(187, 186, 186);
+}
+
+#chatBtn {
+	color:rgb(137, 137, 137);
+}
+
+#chatBtn:hover {	
+	color:rgb(187, 186, 186);
+}
+
+#chatBtn:focus {
+	box-shadow:none;
+}
+
+#profileBtn {
+    color:rgb(137, 137, 137);
+    border:none;
+}
+
+#profileBtn:hover {	
+    color:rgb(187, 186, 186);
+}
+
+#profileBtn:focus{
+    box-shadow:none;
+}
+
+/* form*/
+#addListingForm {
+    width: 60%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 50px;
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 5px;
+    padding: 30px 30px 30px 30px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(106,191,247);
+}
+
+h {
+    font-size:1.5rem;
+    color: rgb(106,191,247);
+}
+
+#postListingBtn {
+    background-color: rgb(106,191,247);
+    color:white;
+}
+
+#postListingBtn:hover {
+    background-color: rgb(143, 210, 255);
+}
