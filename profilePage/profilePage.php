@@ -48,7 +48,7 @@
                             echo "<h1>" . $listing['name'] . "</h1>";
                             echo "<p>" . $listing['address'] . "</p>";
                             echo "</div>";
-                            echo "<a href=\"../listing/listing.html?listing=" . $listing['listing_id'] . "\">";
+                            echo "<a href=\"../listingPage/listingPage.php?listing=" . $listing['listing_id'] . "\">";
                             echo "<img class=\"listingPic\" src=\"" . $listing['Picture'] . "\" alt=\"" . $listing['name'] . "\">";
                             echo "</a>";
                             echo "<div class=\"row-lg-12 listingInfo\">";
