@@ -32,7 +32,8 @@
 			<div class="row">
 				<!--Listings column-->
 				<div id= "listings" class="col-lg-6 m-0 p-0">
-                    <?php
+					<?php
+					if (isset($_GET["zip"])) {
                         $conn=mysqli_connect("localhost","test","kuzmin","ApartMATE");
                         $zip = $_GET["zip"];
                         $listsql = "SELECT * FROM `listings` WHERE `zip` = " . $zip;
@@ -63,7 +64,8 @@
                             echo "</div>";
                             echo "</div>";
                             echo "</div>";
-                        }
+						}
+					}
                     ?>			
 				</div>
 				<!--Map----------------------------------------------->
