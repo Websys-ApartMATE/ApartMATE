@@ -96,8 +96,8 @@ if ($data['msg_to'] == $user_id) {
                                 ?>
                                 <div class="chatList <?php echo "conv-" . $conversation_id?>">
                                     <div class="chatPeople">
-                                        <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"
-                                                                alt="sunil"></div>
+                                        <div class="chatImg"><a href="../profilePage/profilePage.php?user=<?php echo $data[$i]['msg_from']?>"><img src="https://ptetutorials.com/images/user-profile.png"
+                                                                alt="sunil"></a></div>
                                         <div class="chatIb">
                                             <h5> <?php echo $name ?> </h5>
                                             <p> Hello, you may come and visit the apartment tomorrow at noon .</p>
