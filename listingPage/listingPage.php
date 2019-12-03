@@ -139,7 +139,7 @@ echo $response;
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <a class="navbar-brand" href="#"><img id="piclogo" src="logo.png" alt="ApartMATE logo"/></a>
     <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -156,7 +156,8 @@ echo $response;
       <button type="button" class="btn btn-outline-secondary" onclick="window.location.href=../homePage/homePage.html">Sign Out 
       </button>
     </div>
-  </nav>
+  </nav> -->
+  <?php include("../navBar/navBar.php"); ?>
 
 
 
