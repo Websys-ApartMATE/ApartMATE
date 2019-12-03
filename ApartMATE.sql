@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2019 at 06:18 AM
+-- Generation Time: Dec 03, 2019 at 07:32 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.0
 
@@ -48,8 +48,8 @@ TRUNCATE TABLE `chat`;
 --
 
 INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
-('2019-11-28 02:38:13', 1, 2, 'Hello World'),
-('2019-11-28 05:31:43', 2, 1, 'Hello, This is Andrew Smith. How are you doing today?');
+('2019-11-28 05:31:43', 2, 1, 'Hello, This is Andrew Smith. How are you doing today?'),
+('2019-12-03 07:21:24', 2, 1, 'Hello World');
 
 -- --------------------------------------------------------
 
@@ -187,3 +187,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'test'@'%' IDENTIFIED BY PASSWORD '*C44E1F4F0C910DD1FDB5DCE5CA243964A07E2EDF';
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON `ApartMATE`.* TO 'test'@'%';
