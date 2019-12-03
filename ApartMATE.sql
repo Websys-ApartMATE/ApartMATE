@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2019 at 11:03 PM
+-- Generation Time: Dec 03, 2019 at 01:45 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.0
 
@@ -37,6 +37,15 @@ CREATE TABLE `chat` (
   `contents` varchar(1000) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
+('2019-12-03 01:35:02', 2, 1, 'Hello World'),
+('2019-12-03 01:35:26', 1, 2, 'World Hello'),
+('2019-12-03 01:36:25', 3, 1, 'Test Test');
+
 -- --------------------------------------------------------
 
 --
@@ -57,8 +66,16 @@ CREATE TABLE `listings` (
   `times` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `rating` int(2) NOT NULL,
   `Picture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `landlord` smallint(3) NOT NULL,
   `name` varchar(256) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `listings`
+--
+
+INSERT INTO `listings` (`listing_id`, `zip`, `street`, `city`, `state`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `Picture`, `landlord`, `name`) VALUES
+(1, 12180, '110 Colleen Rd', 'Troy', 'New York', 1783, 1200, 2, 1, 'This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke free. Looking for student tenants for the Spring Semester ', 'Mondays 5pm - 9pm', 3, NULL, 2, 'Country Garden Apartments');
 
 -- --------------------------------------------------------
 
@@ -78,6 +95,15 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `email`, `password`, `full_name`, `phone_number`, `dob`, `rating`, `user_type`) VALUES
+(1, 'test@rpi.edu', 'test', 'Andrew Smith', 111111, '2019-12-02', NULL, NULL),
+(2, 'test2@rpi.edu', 'test2', 'Bandrew Smith', 1111112, '2019-12-18', NULL, NULL),
+(3, 'test3@rpi.edu', 'test3', 'Candrew Smith', 1111113, '2019-12-11', NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -94,7 +120,8 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `listings`
   ADD PRIMARY KEY (`listing_id`),
-  ADD KEY `zip` (`zip`);
+  ADD KEY `zip` (`zip`),
+  ADD KEY `landlord` (`landlord`);
 
 --
 -- Indexes for table `users`
@@ -110,13 +137,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `listing_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `listing_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` smallint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` smallint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -128,6 +155,12 @@ ALTER TABLE `users`
 ALTER TABLE `chat`
   ADD CONSTRAINT `chat_ibfk_1` FOREIGN KEY (`msg_from`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `chat_ibfk_2` FOREIGN KEY (`msg_to`) REFERENCES `users` (`user_id`);
+
+--
+-- Constraints for table `listings`
+--
+ALTER TABLE `listings`
+  ADD CONSTRAINT `listings_ibfk_1` FOREIGN KEY (`landlord`) REFERENCES `users` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
