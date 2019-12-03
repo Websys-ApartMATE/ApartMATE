@@ -4,6 +4,18 @@ body {
 	height:100%;
 }
 
+#profileBody {
+    padding-top: 25px;
+    background-color:rgb(235, 233, 233);
+}
+
+.container{
+    padding: 25px 5px 5px 5px;
+    background-color:white;
+    border-radius: 5px;
+    color:rgb(92, 92, 92);
+  }
+
 /* Content-----------------------------*/
 #content{
     padding: 25px;
@@ -38,7 +50,7 @@ body {
     /* display: block; */
     /* margin-left: 35px; */
     margin-right: 35px;
-    background-color:  #6600ff;
+    background-color:  rgb(106,191,247);
     color: white;
     padding: 5px;
 }
@@ -46,7 +58,7 @@ body {
     display: block;
     /* margin-left: 35px; */
     margin-right: 35px;
-    background-color:  #6600ff;
+    background-color:  rgb(106,191,247);
     color: white;
     padding: 5px;
     margin-bottom: 10px;
@@ -57,7 +69,7 @@ body {
     display: block;
     /* margin-left: 35px; */
     margin-right: 35px;
-    background-color:  #6600ff;
+    background-color:  rgb(106,191,247);
     color: white;
     padding: 5px;
     width: 350px;
@@ -99,12 +111,3 @@ body {
     padding-top: 20px;
 }
 
-.col-lg-8{
-    /* background-color: lightblue; */
-    border: 2px solid #6600ff;
-    
-}
-
-.col-lg-6{
-    margin-top: 10px;
-}
