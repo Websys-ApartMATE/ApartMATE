@@ -47,7 +47,7 @@
                                 echo "<div class=\"individualListing container\">";
                                 echo "<div class=\"col-12 apartmentNameDisplay\">";
                                 echo "<h1>" . $listing['name'] . "</h1>";
-                                echo "<p>" . $listing['address'] . "</p>";
+                                echo "<p>" . $list['street'] . ", " . $list['city'] . ", " . $list['state'] . " " . $list['zip'] . "</p>";
                                 echo "</div>";
                                 echo "<a href=\"../listingPage/listingPage.php?listing=" . $listing['listing_id'] . "\">";
                                 echo "<img class=\"listingPic\" src=\"" . $listing['Picture'] . "\" alt=\"" . $listing['name'] . "\">";
