@@ -18,14 +18,14 @@
 			<div id="searchRow" class="row h-100">
 				<div id="searchDisplay">
 					<!--Search input field-->
-					<div class="input-group">
-						<input type="text" class="form-control py-2" placeholder="Search Listings">
+					<form class="input-group" method="get" action="searchPage.php">
+						<input type="text" name="zip" class="form-control py-2" placeholder="Search Listings">
 						<div class="input-group-append">
-							<button id="searchBtn" class="btn btn-secondary noBoxShadow" type="button">
+							<button id="searchBtn" class="btn btn-secondary noBoxShadow" type="submit">
 								<i class="fa fa-search fa-sm"></i>
 							</button>
 						</div>
-					</div>		
+					</form>		
 				</div>
 			</div>
 			<!--Listings and Map row--------------------------------------->
@@ -37,7 +37,6 @@
                         $zip = $_GET["zip"];
                         $listsql = "SELECT * FROM `listings` WHERE `zip` = " . $zip;
                         $listres = mysqli_query($conn, $listsql);
-                        $listrow = mysqli_fetch_assoc($listres);
                         while($list = mysqli_fetch_assoc($listres)){
                             echo "<div class=\"individualListing container p-0\">";
                             echo "<div class=\"row\">";
