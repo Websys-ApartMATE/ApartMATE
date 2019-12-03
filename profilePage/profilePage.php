@@ -62,6 +62,7 @@
                                 echo "<h2>Description</h2>";
                                 echo "<p>" . $listing['description'] . "</p>";
                                 echo "</div>";
+                                echo "</div>";
                             }
                         ?>
                     </div>
