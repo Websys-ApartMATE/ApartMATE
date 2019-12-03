@@ -27,163 +27,43 @@
 						</div>
 					</div>		
 				</div>
-				<!--Price Filter-->
-				<div class="btn-group filterBox">
-					<button type="button" id="filterBtn" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Price
-					</button>
-					<div class="dropdown-menu">
-						<button class="dropdown-item" type="button">$500 - $700</button>
-						<button class="dropdown-item" type="button">$700 - $900</button>
-						<button class="dropdown-item" type="button">$900 - $1100</button>
-						<button class="dropdown-item" type="button">$1100 - $1300</button>
-						<button class="dropdown-item" type="button">$1300 - $1500</button>
-					</div>
-				</div>
-				<!--Beds Filter-->
-				<div class="btn-group filterBox">
-					<button type="button" id="filterBtn" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Beds
-					</button>
-					<div class="dropdown-menu">
-						<button class="dropdown-item" type="button">1 bed</button>
-						<button class="dropdown-item" type="button">2 beds</button>
-						<button class="dropdown-item" type="button">3 beds</button>
-						<button class="dropdown-item" type="button">4 beds</button>
-						<button class="dropdown-item" type="button">5 beds</button>
-					</div>
-				</div>
-				<!--Baths Filter-->
-				<div class="btn-group filterBox">
-					<button type="button" id="filterBtn" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Baths
-					</button>
-					<div class="dropdown-menu">
-							<button class="dropdown-item" type="button">1 bath</button>
-							<button class="dropdown-item" type="button">2 baths</button>
-							<button class="dropdown-item" type="button">3 baths</button>
-							<button class="dropdown-item" type="button">4 baths</button>
-							<button class="dropdown-item" type="button">5 baths</button>
-					</div>
-				</div>
-				<!--Size Filter-->
-				<div class="btn-group filterBox">
-					<button type="button" id="filterBtn" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Size
-					</button>
-					<div class="dropdown-menu">
-						<button class="dropdown-item" type="button">500 - 1000 sqft</button>
-						<button class="dropdown-item" type="button">1000 - 1500 sqft</button>
-						<button class="dropdown-item" type="button">1500 - 2000 sqft</button>
-						<button class="dropdown-item" type="button">2000 - 2500 sqft</button>
-						<button class="dropdown-item" type="button">2500 - 3000 sqft</button>
-					</div>
-				</div>
 			</div>
 			<!--Listings and Map row--------------------------------------->
 			<div class="row">
 				<!--Listings column-->
 				<div id= "listings" class="col-lg-6 m-0 p-0">
-					<!--Listing 1---------------------------------------------->
-					<div class="individualListing container p-0" data-toggle="modal" data-target="#myModal">
-						<div class="row">
-							<div class="col-lg-12 apartmentNameDisplay">
-								<h1>Country Garden Apartments</h1>
-								<p>110 Colleen Rd, Troy, NY 12180</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-8 p-0">
-								<img class="img-fluid" src="../resources/countryGardenPic.jpg"> 	
-							</div>
-							<div class="col-lg-4 listingInfo pl-2">
-								<h class="price">$1,783/mo</h>
-								<ul class="list-inline m-0">
-									<li class="list-inline-item listingSizeTags">2 beds</li>
-									<li class="list-inline-item listingSizeTags">1 bath</li>
-									<li class="list-inline-item listingSizeTags">1200 sqft</li>
-								</ul>
-								<h2>Features</h2>
-								<ul class="features">
-									<li>High Speed Internet Access</li>
-									<li>Heating</li>
-									<li>Ceiling Fans</li>
-									<li>Smoke Free</li>
-								</ul>
-								<h2>Description</h2>
-								<p class="description">This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke
-            free. Looking for student tenants for the Spring Semester</p>
-							</div>
-						</div>
-					</div>
-					<!-- Potential Modal -->
-					<div class="modal fade" id="myModal" role="dialog">
-						<div class="modal-dialog">	
-							<!-- Modal content-->
-							<div class="modal-content">		
-							</div>
-						</div>
-					</div>
-					<!--Listing 2----------------------------------------------->
-					<div class="individualListing container p-0">
-						<div class="row">
-							<div class="col-lg-12 apartmentNameDisplay">
-								<h1>The Summit at Duncan Meadows</h1>
-								<p>6 Ridgeway Ln, Troy, NY 12180</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-8 p-0">
-								<img class="img-fluid" src="../resources/duncanMeadows.jpg""> 
-							</div>
-							<div class="col-lg-4 listingInfo pl-2">
-								<h class="price">$1,200/mo</h>
-								<ul class="list-inline m-0">
-									<li class="list-inline-item listingSizeTags">3 beds</li>
-									<li class="list-inline-item listingSizeTags">1 bath</li>
-									<li class="list-inline-item listingSizeTags">1000 sqft</li>
-								</ul>
-								<h2>Features</h2>
-								<ul class="features">
-									<li>Cable Ready</li>
-									<li>Storage Units</li>
-									<li>Tub/Shower</li>
-								</ul>
-								<h2>Description</h2>
-								<p class="description">Looking for student tenants for the Summer Semester</p>
-							</div>
-						</div>
-					</div>
-					<!--Listing 3-------------------------------------------->
-					<div class="individualListing container p-0">
-						<div class="row">
-							<div class="col-lg-12 apartmentNameDisplay">
-								<h1>Hudson Pointe</h1>
-								<p>2 Stanton St, Troy, NY 12180</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-8 p-0">
-								<img class="img-fluid" src="../resources/hudsonPointe.jpg"> 
-							</div>
-							<div class="listingInfo col-lg-4 pl-2">
-								<h class="price">$900/mo</h>
-								<ul class="list-inline">
-									<li class="list-inline-item listingSizeTags">2 beds</li>
-									<li class="list-inline-item listingSizeTags">2 baths</li>
-									<li class="list-inline-item listingSizeTags">700 sqft</li>
-								</ul>
-								<h2>Features</h2>
-								<ul class="features">
-									<li>High Speed Internet Access</li>
-									<li>Heating</li>
-									<li>Smoke Free</li>
-								</ul>
-								<h2>Description</h2>
-								<p class="description">Looking for student tenants for the Summer Semester</p>
-							</div>
-						</div>
-					</div>					
+                    <?php
+                        $conn=mysqli_connect("localhost","test","kuzmin","ApartMATE");
+                        $zip = $_GET["zip"];
+                        $listsql = "SELECT * FROM `listings` WHERE `zip` = " . $zip;
+                        $listres = mysqli_query($conn, $listsql);
+                        $listrow = mysqli_fetch_assoc($listres);
+                        while($list = mysqli_fetch_assoc($listres)){
+                            echo "<div class=\"individualListing container p-0\">";
+                            echo "<div class=\"row\">";
+                            echo "<div class=\"col-lg-12 apartmentNameDisplay\">";
+                            echo "<h1>" . $list['name'] . "</h1>";
+                            echo "<p>" . $list['street'] . ", " . $list['city'] . ", " . $list['state'] . " " . $list['zip'] . "</p>";
+                            echo "</div>";
+                            echo "</div>";
+                            echo "<div class=\"row\">";
+                            echo "<div class=\"col-lg-8 p-0\">";
+                            echo "<img class=\"img-fluid\" src=\"../resources/" . $list['Picture'] . "\">";
+                            echo "</div>";
+                            echo "<div class=\"col-lg-4 listingInfo pl-2\">";
+                            echo "<h1 class=\"price\">$" . number_format($list['price']) . "/mo</h>";
+                            echo "<ul class=\"list-inline m-0\">";
+                            echo "<li class=\"list-inline-item listingSizeTags\">" . $list['bed'] . " bed(s)</li>";
+                            echo "<li class=\"list-inline-item listingSizeTags\">" . $list['bath'] . " bath(s)</li>";
+                            echo "<li class=\"list-inline-item listingSizeTags\">" . number_format($list['sqft']) . " sqft</li>";
+                            echo "</ul>";
+                            echo "<h2>Description</h2>";
+                            echo "<p>" . $list['description'] . "</p>";
+                            echo "</div>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    ?>			
 				</div>
 				<!--Map----------------------------------------------->
 				<div id="mapDisplay" class="col-lg-6 m-0 p-0">
