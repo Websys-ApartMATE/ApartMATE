@@ -127,8 +127,7 @@ body {
 	height: 86.5vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	
- } 
+} 
 
 .apartmentNameDisplay {
 	background-color: rgba(139, 217, 247, 0.37);
@@ -153,6 +152,7 @@ h2 {
 }
 
 .listingSizeTags {
+	font-size:1.2rem;
 	background-color:rgba(189, 189, 189, 0.37);
 	border-radius: 5px;
 	padding: 3px 5px 3px 5px;
@@ -164,4 +164,15 @@ h2 {
 
 .description {
   font-size: 0.9rem;
+}
+
+/*Map iframe */ 
+#mapDisplay {
+	width:100%;
+	height: 86.5vh;
+}
+
+#mapIframe{
+	width:100%;
+	height: 100%;
 }

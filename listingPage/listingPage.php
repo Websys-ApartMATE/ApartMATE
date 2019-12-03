@@ -126,15 +126,13 @@ echo $response;
 <head>
   <meta charset="UTF-8">
   <title>ApartMATE</title>
-  <link rel="stylesheet" href="listing.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="listingPage.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!--Font awesome icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 </head>
 
@@ -159,37 +157,37 @@ echo $response;
   </nav> -->
   <?php include("../navBar/navBar.php"); ?>
 
-
-
-  <div class= "container">
-    <div class="row">
-      <div id="listing_info" class="col-lg-5">
-        <h1 id="name"><?php echo $row['name'] ?></h1>
-        <h2 id="address"><?php echo $row['street']. ', '. $row['city']. ', '. $row['state']. ', '. $row['zip']?> </h2>
-        <h3 id="price">$<?php echo $row['price']?> per month</h3>
-        <h4 class="title">Features:</h4>
-        <ul id="basic_info">
-          <li><?php echo $row['bed']?> Beds</li>
-          <li><?php echo $row['bath']?> Bath</li>
-          <li><?php echo $row['sqft']?> Sqft</li>
-        </ul>
-        <h4 class="title">Description:</h4>
-        <ul id="description">
-          <li><?php echo $row['description']?>
-          </li>
-        </ul>
-        <h4 class="title">Details:</h4>
-        <ul id="details" class="col-lg-12">
-          <li>Times for Inquiry: <?php echo $row['times'] ?></li>
-          <li>User Rating: <?php echo $row['rating'] ?> out of 5</li>
-        </ul>
-      </div>
-      <div class="col-lg-1"></div>
-      <div class="col-lg-6">
-        <img id="apartment_img" src= "<?php echo "../resources/" . $row['Picture']?>" alt="">
+  <div id="mainBody">
+    <div class= "container">
+      <div class="row">
+        <div id="listing_info" class="col-lg-5">
+          <h1 id="name"><?php echo $row['name'] ?></h1>
+          <h2 id="address"><?php echo $row['street']. ', '. $row['city']. ', '. $row['state']. ', '. $row['zip']?> </h2>
+          <h3 id="price">$<?php echo $row['price']?> per month</h3>
+          <h4 class="title">Features:</h4>
+          <ul id="basic_info">
+            <li><?php echo $row['bed']?> Beds</li>
+            <li><?php echo $row['bath']?> Bath</li>
+            <li><?php echo $row['sqft']?> Sqft</li>
+          </ul>
+          <h4 class="title">Description:</h4>
+          <ul id="description">
+            <li><?php echo $row['description']?>
+            </li>
+          </ul>
+          <h4 class="title">Details:</h4>
+          <ul id="details" class="col-lg-12">
+            <li>Times for Inquiry: <?php echo $row['times'] ?></li>
+            <li>User Rating: <?php echo $row['rating'] ?> out of 5</li>
+          </ul>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6">
+          <img id="apartment_img" src= "<?php echo "../resources/" . $row['Picture']?>" alt="">
+        </div>
       </div>
     </div>
-
+  </div>
 </body>
 
 </html>
