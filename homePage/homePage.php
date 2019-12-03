@@ -15,17 +15,19 @@
 		<img id="houseImg" src="../resources/house1.png" width="450" height="400">
 		<div id="mainBody">
 			<!--Search bar-------------------------------------------------------------------------------------->
-			<form id="content" action="../searchPage/searchPage.php">
+			<form id="content" method="get" action="../searchPage/searchPage.php">
 				<div id="oneline">
 					<h>Find your home away from home.</h>
 				</div>
 				<!--Search input field-->
 				<div id="searchBar" class="input-group">
-					<input id="zipcode" type="text" class="form-control" placeholder="Enter Zipcode">
-					<div class="input-group-append">
-						<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button" onclick="window.location.href='../searchPage/searchPage.php'">Search
-						</button>
-					</div>
+					<form action="searchPage.php" method="get">
+						<input id="zipcode" type="text" class="form-control" placeholder="Enter Zipcode">
+						<div class="input-group-append">
+							<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button" onclick="window.location.href='../searchPage/searchPage.php'">Search
+							</button>
+						</div>
+					</form>
 				</div>		
 			</form>
 		</div>
