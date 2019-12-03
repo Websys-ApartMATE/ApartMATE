@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2019 at 01:45 AM
+-- Generation Time: Dec 03, 2019 at 02:15 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.0
 
@@ -75,7 +75,7 @@ CREATE TABLE `listings` (
 --
 
 INSERT INTO `listings` (`listing_id`, `zip`, `street`, `city`, `state`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `Picture`, `landlord`, `name`) VALUES
-(1, 12180, '110 Colleen Rd', 'Troy', 'New York', 1783, 1200, 2, 1, 'This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke free. Looking for student tenants for the Spring Semester ', 'Mondays 5pm - 9pm', 3, NULL, 2, 'Country Garden Apartments');
+(1, 12180, '110 Colleen Rd', 'Troy', 'New York', 1783, 1200, 2, 1, 'This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke free. Looking for student tenants for the Spring Semester ', 'Mondays 5pm - 9pm', 3, '../resources/countryGardenPic.jpg', 2, 'Country Garden Apartments');
 
 -- --------------------------------------------------------
 
