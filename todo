@@ -1,9 +1,9 @@
-HOME:
-* Make the "Enter Zipcode" into a form that will send zip -> searchPage.php
+BEFORE WE'RE FINISHED:
 
-LISTING:
-* Pull info from database.
-* Get it working
+1. ADD LOGIN & STATE
 
-ADD A LISTING:
-* Listing page should add to database
+2. ADD CHAT + PROFILE FUNCTIONALITY TO LISTING PAGE
+
+3. ADD RATING TO PROFILE PAGE
+
+4. REWRITE CHAT TO NOT DEPEND ON JS
