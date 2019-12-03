@@ -25,10 +25,10 @@
                         $userres = mysqli_query($conn, $usersql);
                         $userrow = mysqli_fetch_assoc($userres);
                     ?>
-                    <div class="col-lg-4">
-                        <img src="profilePicture.png" alt="Default profile picture" height="250" width="250">
+                    <div class="col-lg-2">
+                        <img src="profilePicture.png" alt="Default profile picture" height="100" width="100" class="center-block">
                         <h3 id="rating">Rating:</h3>
-                        <img id="stars" src="stars.png" alt="Stars" height="50px" width="175px">
+                        <img id="stars" src="stars.png" alt="Stars" height="30px" width="100px" class="center-block">
                     </div>
                     <div class="col-lg-4">
                         <h1 id="name"><?php echo $userrow['full_name'];?></h1>
@@ -36,7 +36,7 @@
                         <h3 id="email">Email: <?php echo $userrow['email'];?></h3>
                         <h3 id="phone">Phone Number: <?php echo $userrow['phone_number'];?></h3>
                     </div>
-                    <div id="mainBody" class="container col-lg-4 overflow-auto">
+                    <div id="mainBody" class="col-lg-6 overflow-auto">
                         <?php
                             $listingsql = "SELECT * FROM `listings` WHERE `landlord` = " . $id;
                             $listingres = mysqli_query($conn, $listingsql);

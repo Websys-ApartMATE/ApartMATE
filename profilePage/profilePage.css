@@ -33,12 +33,14 @@ body {
 }
 #rating{
     display: block;
-    margin-left: 80px;
-    /* text-align: center; */
+    text-align: center;
 }
-#stars{
-    margin-left: 35px;
-}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
 
 #listings{
     display: block;
@@ -56,14 +58,13 @@ body {
 }
 #avail_list{
     display: block;
-    /* margin-left: 35px; */
     margin-right: 35px;
     background-color:  rgb(106,191,247);
     color: white;
     padding: 5px;
     margin-bottom: 10px;
-    /* width: 680px; */
-    width: 120%;
+    width: 100%;
+    border-radius:5px;
 }
 #prev_view{
     display: block;
@@ -97,7 +98,7 @@ body {
 
 .individualListing {
     /* margin-top:10px; */
-    box-shadow: 10px 10px 5px rgb(201, 199, 199);
+    box-shadow: 5px 5px 5px rgb(201, 199, 199);
     margin: 10px;
     border: 2px solid;    
 }
