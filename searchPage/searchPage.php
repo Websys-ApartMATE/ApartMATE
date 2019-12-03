@@ -47,7 +47,9 @@
                             echo "</div>";
                             echo "<div class=\"row\">";
                             echo "<div class=\"col-lg-8 p-0\">";
+                            echo "<a href=\"../listingPage/listingPage.php?listing=" . $list['listing_id'] . "\">";
                             echo "<img class=\"img-fluid\" src=\"../resources/" . $list['Picture'] . "\">";
+                            echo "</a>";
                             echo "</div>";
                             echo "<div class=\"col-lg-4 listingInfo pl-2\">";
                             echo "<h1 class=\"price\">$" . number_format($list['price']) . "/mo</h>";
