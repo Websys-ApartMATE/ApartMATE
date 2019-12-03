@@ -15,7 +15,7 @@
 		<img id="houseImg" src="../resources/house1.png" width="450" height="400">
 		<div id="mainBody">
 			<!--Search bar-------------------------------------------------------------------------------------->
-			<form id="content" action="../searchPage/searchPage.php">
+			<form id="content" method="get" action="../searchPage/searchPage.php">
 				<div id="oneline">
 					<h>Find your home away from home.</h>
 				</div>
