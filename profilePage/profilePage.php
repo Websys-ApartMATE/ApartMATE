@@ -52,11 +52,11 @@
                             echo "<img class=\"listingPic\" src=\"" . $listing['Picture'] . "\" alt=\"" . $listing['name'] . "\">";
                             echo "</a>";
                             echo "<div class=\"row-lg-12 listingInfo\">";
-                            echo "<h1 class=\"price\">$" . $listing['price'] . "/mo</h1>";
+                            echo "<h1 class=\"price\">$" . number_format($listing['price']) . "/mo</h1>";
                             echo "<ul class=\"list-inline\">";
                             echo "<li class=\"list-inline-item\">" . $listing['bed'] . " bed(s)</li>"; 
                             echo "<li class=\"list-inline-item\">" . $listing['bath'] . " bath(s)</li>";
-                            echo "<li class=\"list-inline-item\">" . $listing['sqft'] . " sqft</li>";
+                            echo "<li class=\"list-inline-item\">" . number_format($listing['sqft']) . " sqft</li>";
                             echo "</ul>";
                             echo "<h2>Description</h2>";
                             echo "<p>" . $listing['description'] . "</p>";
