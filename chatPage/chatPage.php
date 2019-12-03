@@ -9,14 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contents = $_POST['contents'];
     $post_query = "INSERT INTO chat (msg_to, msg_from, contents) VALUES ($msg_to, $msg_from, '$contents')";
     $con->query($post_query);
-    # print_r($post_query);
-    # print_r($con->error);
+//    print_r($post_query);
+//    print_r($con->error);
 
 }
 
 $user_id = 1;
 
-$query = "SELECT timestamp, msg_to, msg_from, u.full_name, u2.full_name, contents FROM chat
+$query = "SELECT timestamp, msg_to, msg_from, u.full_name, u2.full_name as full_name2, contents FROM chat
 INNER JOIN users u on chat.msg_to = u.user_id
 INNER JOIN users u2 on chat.msg_from = u2.user_id 
 WHERE u.user_id = $user_id or u2.user_id = $user_id";
@@ -69,7 +69,26 @@ if ($data['msg_to'] == $user_id) {
 </head>
 <body>
 <!--Navigation Bar--------------------------------------------------------------------------------------->
-<?php include('../navBar/navBar.php')?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img id="piclogo" src="logo.png" alt="ApartMATE logo"/></a>
+    <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-light" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Rent</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Add a Listing</a>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-outline-secondary"
+                onclick="window.location.href='../homePage/homePage.html'"
+        ">Sign Out</button>
+    </div>
+</nav>
+
 <!--Message Box--------------------------------------------------------------------------------------->
 <div class="container">
     <h3 class=" text-center">Messaging</h3>
@@ -83,9 +102,11 @@ if ($data['msg_to'] == $user_id) {
                             if ($data[$i]['msg_to'] != $user_id) {
                                 array_push($listOfConv, $data[$i]['msg_to']);
                                 $conversation_id = $data[$i]['msg_to'];
+                                $name = $data[$i]['full_name'];
                             } else if ($data[$i]['msg_from'] != $user_id) {
                                 array_push($listOfConv, $data[$i]['msg_from']);
                                 $conversation_id = $data[$i]['msg_from'];
+                                $name = $data[$i]['full_name2'];
                             }
                             ?>
                             <div class="chatList <?php echo "conv-" . $conversation_id?>">
@@ -93,7 +114,7 @@ if ($data['msg_to'] == $user_id) {
                                     <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"
                                                               alt="sunil"></div>
                                     <div class="chatIb">
-                                        <h5> <?php echo $data[$i]['full_name'] ?> </h5>
+                                        <h5> <?php echo $name ?> </h5>
                                         <p> Hello, you may come and visit the apartment tomorrow at noon .</p>
                                     </div>
                                 </div>
