@@ -21,7 +21,7 @@
 				</div>
 				<!--Search input field-->
 				<div id="searchBar" class="input-group">
-					<form action="searchPage.php" method="get">
+					<form action="../searchPage/searchPage.php" method="get">
 						<input id="zipcode" type="text" class="form-control" placeholder="Enter Zipcode">
 						<div class="input-group-append">
 							<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button" onclick="window.location.href='../searchPage/searchPage.php'">Search
