@@ -129,7 +129,7 @@ if (isset($_POST['addListing'])) {
                 </div>
             </div>
             <!--Submit Button-->
-            <input type="submit" name="addListing" value="addListingForm">
+            <input type="submit" name="addListing" value="Submit">
         </form>
     </div>
 </body>
