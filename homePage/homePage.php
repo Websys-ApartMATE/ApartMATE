@@ -21,11 +21,10 @@
 				</div>
 				<!--Search input field-->
 				<div id="searchBar" class="input-group">
-					<form action="../searchPage/searchPage.php" method="get">
-						<input id="zipcode" type="text" class="form-control" placeholder="Enter Zipcode">
+					<form action="/searchPage/searchPage.php" method="get">
+						<input id="zipcode" type="text" name="zip" class="form-control" placeholder="Enter Zipcode">
 						<div class="input-group-append">
-							<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="button" onclick="window.location.href='../searchPage/searchPage.php'">Search
-							</button>
+							<button id="searchBtn" class="btn form-control btn-secondary noBoxShadow" type="submit">Search</button>
 						</div>
 					</form>
 				</div>		
