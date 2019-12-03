@@ -157,37 +157,37 @@ echo $response;
   </nav> -->
   <?php include("../navBar/navBar.php"); ?>
 
-
-
-  <div class= "container">
-    <div class="row">
-      <div id="listing_info" class="col-lg-5">
-        <h1 id="name"><?php echo $row['name'] ?></h1>
-        <h2 id="address"><?php echo $row['street']. ', '. $row['city']. ', '. $row['state']. ', '. $row['zip']?> </h2>
-        <h3 id="price">$<?php echo $row['price']?> per month</h3>
-        <h4 class="title">Features:</h4>
-        <ul id="basic_info">
-          <li><?php echo $row['bed']?> Beds</li>
-          <li><?php echo $row['bath']?> Bath</li>
-          <li><?php echo $row['sqft']?> Sqft</li>
-        </ul>
-        <h4 class="title">Description:</h4>
-        <ul id="description">
-          <li><?php echo $row['description']?>
-          </li>
-        </ul>
-        <h4 class="title">Details:</h4>
-        <ul id="details" class="col-lg-12">
-          <li>Times for Inquiry: <?php echo $row['times'] ?></li>
-          <li>User Rating: <?php echo $row['rating'] ?> out of 5</li>
-        </ul>
-      </div>
-      <div class="col-lg-1"></div>
-      <div class="col-lg-6">
-        <img id="apartment_img" src= "<?php echo "../resources/" . $row['Picture']?>" alt="">
+  <div id="mainBody">
+    <div class= "container">
+      <div class="row">
+        <div id="listing_info" class="col-lg-5">
+          <h1 id="name"><?php echo $row['name'] ?></h1>
+          <h2 id="address"><?php echo $row['street']. ', '. $row['city']. ', '. $row['state']. ', '. $row['zip']?> </h2>
+          <h3 id="price">$<?php echo $row['price']?> per month</h3>
+          <h4 class="title">Features:</h4>
+          <ul id="basic_info">
+            <li><?php echo $row['bed']?> Beds</li>
+            <li><?php echo $row['bath']?> Bath</li>
+            <li><?php echo $row['sqft']?> Sqft</li>
+          </ul>
+          <h4 class="title">Description:</h4>
+          <ul id="description">
+            <li><?php echo $row['description']?>
+            </li>
+          </ul>
+          <h4 class="title">Details:</h4>
+          <ul id="details" class="col-lg-12">
+            <li>Times for Inquiry: <?php echo $row['times'] ?></li>
+            <li>User Rating: <?php echo $row['rating'] ?> out of 5</li>
+          </ul>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6">
+          <img id="apartment_img" src= "<?php echo "../resources/" . $row['Picture']?>" alt="">
+        </div>
       </div>
     </div>
-
+  </div>
 </body>
 
 </html>
