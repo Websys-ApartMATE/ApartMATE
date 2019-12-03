@@ -1,4 +1,7 @@
-
+body {
+  height: 100%;
+  min-height: 100%;
+}
 
 ul {
   list-style: none;
@@ -18,12 +21,6 @@ ul {
   font-size: 20px;
 }
 
-body {
-  padding-top: 15px;
-  height: 100%;
-  min-height: 100%;
-}
-
 #apartment_img {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -32,11 +29,6 @@ body {
 
 #listing_info {
   padding-bottom: 10px;
-}
-
-.container {
-  background-color: #08bbe7da !important;
-  box-shadow: 10px 10px 50px #08bbe7da;
 }
 
 li {

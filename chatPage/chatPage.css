@@ -1,10 +1,27 @@
 /*Navbar*/
 body {
 	width:100%;
-	height:100%;
+  height:100%;
 }
 
-.container{max-width:1170px; margin:auto;}
+#mainBody {
+  padding-top: 25px;
+  background-color:rgb(235, 233, 233);
+  height:92.3vh;
+}
+
+h1 {
+  font-size:1.5rem;
+  text-align: center;
+  color: rgb(106,191,247);
+}
+
+.container{
+  padding-top: 25px;
+  max-width:1170px; 
+  background-color:white;
+  border-radius: 5px;
+}
 img{ max-width:100%;}
 .inboxPeople {
   background: #f8f8f8 none repeat scroll 0 0;
@@ -16,9 +33,9 @@ img{ max-width:100%;}
   border: 1px solid #c4c4c4;
   clear: both;
   overflow: hidden;
+  border-radius:5px;
 }
 .top_spac{ margin: 20px 0 0;}
-
 
 
 .chatIb h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
@@ -72,12 +89,12 @@ img{ max-width:100%;}
 .receivedWithinMessage { width: 57%;}
 .messageBox {
   float: left;
-  padding: 30px 15px 0 25px;
+  padding: 0px 15px 0px 25px;
   width: 60%;
 }
 
  .sentMessage p {
-  background: #05728f none repeat scroll 0 0;
+  background-color: rgb(106,191,247);
   border-radius: 3px;
   font-size: 14px;
   margin: 0; color:#fff;
@@ -100,7 +117,7 @@ img{ max-width:100%;}
 
 .typeMessage {border-top: 1px solid #c4c4c4;position: relative;}
 .messageSendBtn {
-  background: #05728f none repeat scroll 0 0;
+  background-color: rgb(106,191,247);
   border: medium none;
   border-radius: 50%;
   color: #fff;
@@ -112,7 +129,10 @@ img{ max-width:100%;}
   top: 11px;
   width: 33px;
 }
-.messaging { padding: 0 0 50px 0;}
+.messaging { 
+  padding: 0 0 10px 0;
+}
+
 .messageHistory {
   height: 516px;
   overflow-y: auto;

@@ -74,57 +74,59 @@ if ($data['msg_to'] == $user_id) {
 <?php include('../navBar/navBar.php')?>
 
 <!--Message Box--------------------------------------------------------------------------------------->
-<div class="container">
-    <h3 class=" text-center">Messaging</h3>
-    <div class="messaging">
-        <div class="inboxMsg">
-            <div class="inboxPeople">
-                <div class="inboxChat">
-                    <?php $listOfConv = array();
-                    for ($i = 0; $i < count($data); $i++) {
-                        if (!in_array($data[$i]['msg_to'], $listOfConv) && !in_array($data[$i]['msg_from'], $listOfConv)) {
-                            if ($data[$i]['msg_to'] != $user_id) {
-                                array_push($listOfConv, $data[$i]['msg_to']);
-                                $conversation_id = $data[$i]['msg_to'];
-                                $name = $data[$i]['full_name'];
-                            } else if ($data[$i]['msg_from'] != $user_id) {
-                                array_push($listOfConv, $data[$i]['msg_from']);
-                                $conversation_id = $data[$i]['msg_from'];
-                                $name = $data[$i]['full_name2'];
-                            }
-                            ?>
-                            <div class="chatList <?php echo "conv-" . $conversation_id?>">
-                                <div class="chatPeople">
-                                    <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"
-                                                              alt="sunil"></div>
-                                    <div class="chatIb">
-                                        <h5> <?php echo $name ?> </h5>
-                                        <p> Hello, you may come and visit the apartment tomorrow at noon .</p>
+<div id="mainBody">
+    <div class="container">
+        <h1>Messaging</h1>
+        <div class="messaging">
+            <div class="inboxMsg">
+                <div class="inboxPeople">
+                    <div class="inboxChat">
+                        <?php $listOfConv = array();
+                        for ($i = 0; $i < count($data); $i++) {
+                            if (!in_array($data[$i]['msg_to'], $listOfConv) && !in_array($data[$i]['msg_from'], $listOfConv)) {
+                                if ($data[$i]['msg_to'] != $user_id) {
+                                    array_push($listOfConv, $data[$i]['msg_to']);
+                                    $conversation_id = $data[$i]['msg_to'];
+                                    $name = $data[$i]['full_name'];
+                                } else if ($data[$i]['msg_from'] != $user_id) {
+                                    array_push($listOfConv, $data[$i]['msg_from']);
+                                    $conversation_id = $data[$i]['msg_from'];
+                                    $name = $data[$i]['full_name2'];
+                                }
+                                ?>
+                                <div class="chatList <?php echo "conv-" . $conversation_id?>">
+                                    <div class="chatPeople">
+                                        <div class="chatImg"><img src="https://ptetutorials.com/images/user-profile.png"
+                                                                alt="sunil"></div>
+                                        <div class="chatIb">
+                                            <h5> <?php echo $name ?> </h5>
+                                            <p> Hello, you may come and visit the apartment tomorrow at noon .</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <?php
+                                <?php
+                            }
                         }
-                    }
-                    ?>
+                        ?>
+                    </div>
                 </div>
-            </div>
-            <div class="messageBox">
-                <div class="messageHistory">
-                    <?php
-                    for ($i = 0; $i < $result->num_rows; $i++) {
-                        render_message($user_id, $data[$i]);
-                    }
-                    ?>
-                </div>
-                <div class="typeMessage">
-                    <form class="inputTypeMessage" action="chatPage.php" method="post">
-                        <input type="hidden" name="msg_to" id="msg_to">
-                        <input type="hidden" name="msg_from" id="msg_from">
-                        <input type="text" class="writeMessage" placeholder="Type a message" name="contents" />
-                        <button class="messageSendBtn" type="button"><i class="fa fa-paper-plane-o"
-                                                                        aria-hidden="true"></i></button>
-                    </form>
+                <div class="messageBox">
+                    <div class="messageHistory">
+                        <?php
+                        for ($i = 0; $i < $result->num_rows; $i++) {
+                            render_message($user_id, $data[$i]);
+                        }
+                        ?>
+                    </div>
+                    <div class="typeMessage">
+                        <form class="inputTypeMessage" action="chatPage.php" method="post">
+                            <input type="hidden" name="msg_to" id="msg_to">
+                            <input type="hidden" name="msg_from" id="msg_from">
+                            <input type="text" class="writeMessage" placeholder="Type a message" name="contents" />
+                            <button class="messageSendBtn" type="button"><i class="fa fa-paper-plane-o"
+                                                                            aria-hidden="true"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
