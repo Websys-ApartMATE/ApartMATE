@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2019 at 02:15 AM
+-- Generation Time: Dec 03, 2019 at 06:18 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.0
 
@@ -30,6 +30,7 @@ USE `ApartMATE`;
 -- Table structure for table `chat`
 --
 
+DROP TABLE IF EXISTS `chat`;
 CREATE TABLE `chat` (
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `msg_to` smallint(3) NOT NULL,
@@ -38,13 +39,17 @@ CREATE TABLE `chat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Truncate table before insert `chat`
+--
+
+TRUNCATE TABLE `chat`;
+--
 -- Dumping data for table `chat`
 --
 
 INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
-('2019-12-03 01:35:02', 2, 1, 'Hello World'),
-('2019-12-03 01:35:26', 1, 2, 'World Hello'),
-('2019-12-03 01:36:25', 3, 1, 'Test Test');
+('2019-11-28 02:38:13', 1, 2, 'Hello World'),
+('2019-11-28 05:31:43', 2, 1, 'Hello, This is Andrew Smith. How are you doing today?');
 
 -- --------------------------------------------------------
 
@@ -52,6 +57,7 @@ INSERT INTO `chat` (`timestamp`, `msg_to`, `msg_from`, `contents`) VALUES
 -- Table structure for table `listings`
 --
 
+DROP TABLE IF EXISTS `listings`;
 CREATE TABLE `listings` (
   `listing_id` int(100) NOT NULL,
   `zip` int(11) NOT NULL,
@@ -64,18 +70,27 @@ CREATE TABLE `listings` (
   `bath` int(2) NOT NULL,
   `description` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `times` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `rating` int(2) NOT NULL,
+  `rating` int(2) NOT NULL DEFAULT 5,
+  `type` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `utilites` int(1) DEFAULT NULL,
+  `landlord` smallint(3) DEFAULT NULL,
   `Picture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `landlord` smallint(3) NOT NULL,
   `name` varchar(256) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Truncate table before insert `listings`
+--
+
+TRUNCATE TABLE `listings`;
+--
 -- Dumping data for table `listings`
 --
 
-INSERT INTO `listings` (`listing_id`, `zip`, `street`, `city`, `state`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `Picture`, `landlord`, `name`) VALUES
-(1, 12180, '110 Colleen Rd', 'Troy', 'New York', 1783, 1200, 2, 1, 'This is a great place to rent. The internet is really fast, theres heating, ceiling fans, and its smoke free. Looking for student tenants for the Spring Semester ', 'Mondays 5pm - 9pm', 3, '../resources/countryGardenPic.jpg', 2, 'Country Garden Apartments');
+INSERT INTO `listings` (`listing_id`, `zip`, `street`, `city`, `state`, `price`, `sqft`, `bed`, `bath`, `description`, `times`, `rating`, `type`, `utilites`, `landlord`, `Picture`, `name`) VALUES
+(1, 12180, '110 Colleen Rd', 'Troy', 'NY', 1783, 1200, 2, 1, 'High Speed Internet Access</br>\r\nHeating<br/>\r\nCeiling Fans<br/>\r\nSmoke Free', 'Mondays 5pm-9pm', 3, 'Lease', 0, 1, 'countryGardenPic.jpg', 'Country Garden Apartments'),
+(2, 12180, '2 Stanton St', 'Troy', 'NY', 900, 700, 2, 2, 'High Speed Internet Access<br/>\r\nHeating<br/>\r\nSmoke Free<br/>', 'Monday 5pm-9pm', 3, 'Lease', 1, 3, 'hudsonPointe.jpg', 'Hudson Pointe'),
+(3, 12180, '6 Ridgeway Ln', 'Troy', 'NY', 1200, 1000, 3, 1, 'Cable Ready<br/>\r\nStorage Units<br/>\r\nTub/Shower', 'Mondays 5pm-9pm', 3, 'Lease', 1, 3, 'duncanMeadows.jpg', 'The Summit at Duncan Meadows');
 
 -- --------------------------------------------------------
 
@@ -83,6 +98,7 @@ INSERT INTO `listings` (`listing_id`, `zip`, `street`, `city`, `state`, `price`,
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` smallint(3) NOT NULL,
   `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
@@ -91,17 +107,22 @@ CREATE TABLE `users` (
   `phone_number` int(15) NOT NULL,
   `dob` date NOT NULL,
   `rating` int(2) DEFAULT NULL,
-  `user_type` int(1) DEFAULT NULL
+  `user_type` int(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `email`, `password`, `full_name`, `phone_number`, `dob`, `rating`, `user_type`) VALUES
-(1, 'test@rpi.edu', 'test', 'Andrew Smith', 111111, '2019-12-02', NULL, NULL),
-(2, 'test2@rpi.edu', 'test2', 'Bandrew Smith', 1111112, '2019-12-18', NULL, NULL),
-(3, 'test3@rpi.edu', 'test3', 'Candrew Smith', 1111113, '2019-12-11', NULL, NULL);
+(1, 'smitha24@rpi.edu', 'test', 'Andrew Smith', 1111111111, '1998-11-18', 5, 0),
+(2, 'test@rpi.edu', 'test2', 'Bandrew Smith', 1111111112, '1978-02-25', 5, 0),
+(3, 'test2@rpi.edu', 'test3', 'Candrew Smith', 1111111222, '1950-01-01', 5, 0);
 
 --
 -- Indexes for dumped tables
@@ -120,8 +141,8 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `listings`
   ADD PRIMARY KEY (`listing_id`),
-  ADD KEY `zip` (`zip`),
-  ADD KEY `landlord` (`landlord`);
+  ADD KEY `landlord` (`landlord`),
+  ADD KEY `zip` (`zip`);
 
 --
 -- Indexes for table `users`
@@ -137,13 +158,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `listing_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `listing_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` smallint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` smallint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
