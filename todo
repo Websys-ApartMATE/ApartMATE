@@ -3,7 +3,7 @@ BEFORE WE'RE FINISHED:
 1. ADD LOGIN & STATE
 
 2. ADD CHAT + PROFILE FUNCTIONALITY TO LISTING PAGE
+    (Have a link to chat with the landlord of a certain listing)
+    (Have a link to the profile page of the landlor of this listing)
 
-3. ADD RATING TO PROFILE PAGE
-
-4. REWRITE CHAT TO NOT DEPEND ON JS
+3. REWRITE CHAT TO NOT DEPEND ON JS
