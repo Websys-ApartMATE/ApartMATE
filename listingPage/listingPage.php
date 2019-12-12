@@ -137,6 +137,24 @@ echo $response;
 </head>
 
 <body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand" href="#"><img id="piclogo" src="logo.png" alt="ApartMATE logo"/></a>
+    <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-light" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Rent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Add a Listing</a>
+        </li>    
+      </ul>
+      <button type="button" class="btn btn-outline-secondary" onclick="window.location.href=../homePage/homePage.html">Sign Out 
+      </button>
+    </div>
+  </nav> -->
   <?php include("../navBar/navBar.php"); ?>
 
   <div id="mainBody">
@@ -166,8 +184,6 @@ echo $response;
         <div class="col-lg-1"></div>
         <div class="col-lg-6">
           <img id="apartment_img" src= "<?php echo "../resources/" . $row['Picture']?>" alt="">
-          <a id="contactBtn" href="../chatPage/chatPage.php">Contact</a>
-          <a id="checkProfileBtn" href="../profilePage/profilePage.php">Check Profile</a>
         </div>
       </div>
     </div>
