@@ -50,33 +50,3 @@ li {
 .title {
   font-size: 30px;
 }
-
-#contactBtn {
-	font-size:1.2rem;
-	margin-top:15px;
-  background-color: rgb(106,191,247);
-	color:white;
-	border:none;
-	border-radius:5px;
-	padding: 0px 5px 0px 5px;
-}
-
-#contactBtn:hover {
-    background-color: rgb(143, 210, 255);
-    text-decoration: none;
-}
-
-#checkProfileBtn {
-	font-size:1.2rem;
-	margin-top:15px;
-  background-color: rgb(106,191,247);
-	color:white;
-	border:none;
-	border-radius:5px;
-	padding: 0px 5px 0px 5px;
-}
-
-#checkProfileBtn:hover {
-    background-color: rgb(143, 210, 255);
-    text-decoration: none;
-}

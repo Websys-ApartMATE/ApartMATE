@@ -166,8 +166,6 @@ echo $response;
         <div class="col-lg-1"></div>
         <div class="col-lg-6">
           <img id="apartment_img" src= "<?php echo "../resources/" . $row['Picture']?>" alt="">
-          <a id="contactBtn" href="../chatPage/chatPage.php">Contact</a>
-          <a id="checkProfileBtn" href="../profilePage/profilePage.php">Check Profile</a>
         </div>
       </div>
     </div>
